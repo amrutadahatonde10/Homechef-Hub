@@ -4,7 +4,7 @@ import Navbar2 from './Navbar2';
 // import Image from './Image';
 import Cards from './Cards';
 import Round from './Round';
-import Nav3 from './Nav3';
+import Col from './Col';
 import Adv from './Adv';
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
     {/* <Image /> */}
     <Cards />
     <Round />
-    <Nav3 />
+    <Col />
     <Adv />
     </div>
   )

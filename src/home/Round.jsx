@@ -33,7 +33,10 @@ const categories = [
 
 const Round = () => {
   return (
-    <div className="grid grid-cols-7 gap-2 p-4 bg-purple-100">
+    <div className="grid grid-cols-7 gap-2 p-4 "
+    style={{ background: 'linear-gradient(to right, #FFF1EB, #D6F6FF)' }}
+
+    >
       {categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-300">

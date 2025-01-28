@@ -3,8 +3,8 @@ import { MdOutlineSearch } from "react-icons/md";
 
 const Navbar2 = () => {
   return (
-        <div className='h-15 w-full bg-zinc-100'
-        // style={{ background: 'linear-gradient(to right, #B6B6B6,hsl(316, 27.40%, 51.40%))' }}
+        <div className='h-15 w-full bg-purple-200'
+        // style={{ background: 'linear-gradient(to right, #FFF1EB, #D6F6FF)' }}
 >
           <nav className="shadow-md py-4">
             <div className="flex items-center justify-between">
