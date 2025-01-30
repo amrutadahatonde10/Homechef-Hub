@@ -54,7 +54,7 @@ const Adv = () => {
   }, []);
 
   return (
-    <div className="h-auto w-full bg-purple-100 mt-2 flex flex-wrap">
+    <div className="h-auto w-full mt-4 flex flex-wrap">
       {/* Left Section */}
       <div className="h-[600px] w-[49%] bg-red-100 relative ml-2 mr-3 mt-1 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full transition-all duration-1000">

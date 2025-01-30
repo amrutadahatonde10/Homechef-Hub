@@ -15,7 +15,7 @@ const Card = ({ image, title, ingredients, time }) => {
       
       {/* Heart Icon positioned on the right side of the image */}
       <div 
-        className="absolute top-4 right-4 p-2 rounded-full bg-purple-00 cursor-pointer"
+        className="absolute top-5 right-5 p-2 rounded-full bg-zinc-400 cursor-pointer"
         onClick={handleHeartClick}
       >
         {/* Filled heart icon that turns red */}

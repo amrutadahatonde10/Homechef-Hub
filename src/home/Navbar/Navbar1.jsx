@@ -8,7 +8,7 @@ const Navbar1 = () => {
   return (
     <div >
       <div 
-        className='h-20 w-full flex bg-gray-100'>
+        className='h-20 w-full flex bg-gray-200'>
         {/* <div className='w-[3%] flex'>
           <FaArrowLeft className='mt-1 ml-3'/>
         </div> */}

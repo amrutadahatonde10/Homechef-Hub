@@ -1,23 +1,24 @@
 import React from 'react';
-import Navbar1 from './Navbar1';
-import Navbar2 from './Navbar2';
-// import Image from './Image';
-import Cards from './Cards';
+import Navbar1 from './Navbar/Navbar1';
+import Navbar2 from './Navbar/Navbar2';
+import Cards from './Card/Cards';
 import Round from './Round';
-import Col from './Col';
+// import Collaboration from './Collaboration';
 import Adv from './Adv';
+import Pop from './Pop';
 
 const Home = () => {
   return (
     <div>
 
-    <Navbar1 />
+    <Navbar1 />   
     <Navbar2 />
-    {/* <Image /> */}
+    {/* <Pop val={"Latest"}/> */}
     <Cards />
     <Round />
-    <Col />
+    {/* <Collaboration /> */}
     <Adv />
+    <Pop val={"Popular Recipes"}/>
     </div>
   )
 }
