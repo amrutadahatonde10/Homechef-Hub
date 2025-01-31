@@ -10,16 +10,14 @@ const Card = ({ image, title, ingredients, time }) => {
   };
 
   return (
-    <div className="bg-zinc-200 rounded-lg shadow-lg overflow-hidden p-4 relative">
-      <img src={image} alt={title} className="w-full h-48 object-cover rounded-md" />
+    <div className=" bg-zinc-200 rounded-lg shadow-lg overflow-hidden p-4 relative">
+      <img src={image} alt={title} className="w-full h-48 object-cover rounded-md " />
       
-      {/* Heart Icon positioned on the right side of the image */}
       <div 
-        className="absolute top-5 right-5 p-2 rounded-full bg-zinc-400 cursor-pointer"
+        className="absolute top-5 right-5 p-1 rounded-full bg-zinc-400 cursor-pointer "
         onClick={handleHeartClick}
       >
-        {/* Filled heart icon that turns red */}
-        <IoMdHeart className={`text-2xl ${isLiked ? 'text-red-600' : 'text-white'}`} />
+        <IoMdHeart className={`text-lg ${isLiked ? 'text-red-600' : 'text-white'}`} />
       </div>
 
       <h3 className="text-center text-xl font-semibold mt-4">{title}</h3>
@@ -29,7 +27,7 @@ const Card = ({ image, title, ingredients, time }) => {
       <div className="grid grid-cols-2 gap-2 ml-[30%] mt-2">
         <ul className="list-disc pl-6">
           {ingredients.map((ingredient, index) => (
-            <li key={index} className="text-sm text-gray-600 ">{ingredient}</li>
+            <li key={index} className="text-sm text-gray-600">{ingredient}</li>
           ))}
         </ul>
       </div>
