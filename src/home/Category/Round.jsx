@@ -33,9 +33,9 @@ const categories = [
 
 const Round = () => {
   return (
-    <div className="grid grid-cols-7 gap-2 p-4 "
-    style={{ background: 'linear-gradient(to right, #FFF1EB, #D6F6FF)' }}
-
+    <div
+      className="grid grid-cols-7 gap-2 p-4 "
+      style={{ background: "linear-gradient(to right, #FFF1EB, #D6F6FF)" }}
     >
       {categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">

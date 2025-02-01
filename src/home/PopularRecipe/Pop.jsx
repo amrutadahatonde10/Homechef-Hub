@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Pop = ({val}) => {
+const Pop = ({ val }) => {
   return (
     <div className="h-10 w-full  mt-4 flex items-center justify-center">
       <div className="flex items-center px-80">

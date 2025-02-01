@@ -2,11 +2,13 @@ import React from 'react';
 import Navbar1 from './Navbar/Navbar1';
 import Navbar2 from './Navbar/Navbar2';
 import Cards from './LatestRecipe/Cards';
-import Round from './Round';
-// import Collaboration from './Collaboration';
-import Adv from './Adv';
+import Round from './Category/Round';
+import Adv from './Advertise/Adv';
 import Pop from './PopularRecipe/Pop';
 import Popular from './PopularRecipe/Popular';
+// import Collaboration from './Collaboration';
+import Footer from './Footer/Footer';
+
 
 const Home = () => {
   return (
@@ -16,10 +18,12 @@ const Home = () => {
     <Navbar2 />
     <Cards />
     <Round />
-    {/* <Collaboration /> */}
     <Adv />
     <Pop val={"Popular Recipes"}/>
     <Popular />
+     {/* <Collaboration /> */}
+     <Footer />
+
     </div>
   )
 }

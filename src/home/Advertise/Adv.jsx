@@ -67,7 +67,9 @@ const Adv = () => {
             <h1 className="text-3xl font-bold mb-4">
               {leftImages[currentLeftImage].title}
             </h1>
-            <p className="text-xl mb-6">{leftImages[currentLeftImage].description}</p>
+            <p className="text-xl mb-6">
+              {leftImages[currentLeftImage].description}
+            </p>
             <a
               href={leftImages[currentLeftImage].link}
               className="bg-purple-600 text-white py-2 px-6 rounded-full font-bold hover:bg-purple-500"
@@ -90,7 +92,9 @@ const Adv = () => {
             <h1 className="text-3xl font-bold mb-4">
               {rightImages[currentRightImage].title}
             </h1>
-            <p className="text-xl mb-6">{rightImages[currentRightImage].description}</p>
+            <p className="text-xl mb-6">
+              {rightImages[currentRightImage].description}
+            </p>
             <a
               href={rightImages[currentRightImage].link}
               className="bg-purple-600 text-white py-2 px-6 rounded-full font-bold hover:bg-purple-500"
