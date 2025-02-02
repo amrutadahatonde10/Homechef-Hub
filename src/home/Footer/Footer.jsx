@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-8">
+    <footer className="bg-gray-800 text-gray-200 py-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Us */}
         <div>
@@ -68,25 +68,31 @@ const Footer = () => {
             </li>
             <li>Address: 123 Kitchen Lane, Foodie City, FC 45678</li>
           </ul>
+
+          {/* Social Media Icons */}
+          <div className="mt-6 flex flex-col items-center mr-[65%]">
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-200 hover:text-white">
+                <FaFacebookF size={24} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white">
+                <FaTwitter size={24} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white">
+                <FaInstagram size={24} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white">
+                <FaYoutube size={24} />
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center">
+      {/* Footer Bottom */}
+      <div className="border-t border-gray-700 mt-4 pt-4 text-center">
         <p>&copy; 2025 HomeChef Hub. All Rights Reserved.</p>
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="#" className="text-gray-200 hover:text-white">
-            <FaFacebookF size={24} />
-          </a>
-          <a href="#" className="text-gray-200 hover:text-white">
-            <FaTwitter size={24} />
-          </a>
-          <a href="#" className="text-gray-200 hover:text-white">
-            <FaInstagram size={24} />
-          </a>
-          <a href="#" className="text-gray-200 hover:text-white">
-            <FaYoutube size={24} />
-          </a>
-        </div>
       </div>
     </footer>
   );

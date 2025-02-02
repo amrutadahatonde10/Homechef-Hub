@@ -35,15 +35,16 @@ const Round = () => {
   return (
     <div
       className="grid grid-cols-7 gap-2 p-4 "
-      style={{ background: "linear-gradient(to right, #FFF1EB, #D6F6FF)" }}
+      style={{ background: "linear-gradient(to right,rgb(247, 220, 209),rgb(226, 198, 245))" }}
     >
       {categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">
-          <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-300">
+          <div className="w-40 h-40 rounded-full overflow-hidden border border-purple-400  shadow-md">
             <img
               src={category.img}
               alt={category.name}
-              className="w-full h-full object-cover"
+
+              className="w-full h-full object-cover shadow-32l"
             />
           </div>
           <div className="h-10 mt-2 flex items-center justify-center bg-white border border-purple-300 rounded-md shadow-md w-40">

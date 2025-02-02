@@ -3,13 +3,10 @@ import { MdOutlineSearch } from "react-icons/md";
 
 const Navbar2 = () => {
   return (
-    <div className="fixed top-[8vh] w-full z-40 bg-purple-300">
-      <div
-        className="h-[8vh] w-full bg-purple-300 "
-        // style={{ background: 'linear-gradient(to right, #FFF1EB, #D6F6FF)' }}
-      >
-        <nav className="shadow-md py-2">
-          <div className="flex items-center justify-between">
+    <div className="fixed top-[8vh] w-full z-40 bg-purple-300 ">
+      <div className="h-[8vh] w-full bg-purple-300 ">
+        <nav className="shadow-md py-2 ">
+          <div className="flex items-center justify-between ">
             <ul className="flex ml-5 space-x-10 mt-1">
               <li>
                 <a
@@ -53,12 +50,12 @@ const Navbar2 = () => {
               </li>
             </ul>
 
-            <div className="relative mr-3">
+            <div className="relative mr-2">
               <MdOutlineSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
               <input
                 type="text"
                 placeholder="Search By Ingredients"
-                className="p-2 pl-8 pr-2 rounded-md border-2 w-full "
+                className="pl-6 rounded-md border-2 w-96 h-10"
               />
             </div>
           </div>

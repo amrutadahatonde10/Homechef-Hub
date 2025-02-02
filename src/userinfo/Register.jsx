@@ -23,7 +23,10 @@ function Register({ onSwitchForm }) {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen "
+    style={{ background: "linear-gradient(to right,rgb(241, 200, 184),rgb(226, 198, 245))" }}
+
+    >
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg border-2 border-gray-300 relative">
 
         <div className="absolute top-1 left-2">
