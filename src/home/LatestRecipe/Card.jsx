@@ -8,7 +8,7 @@ const Card = ({ image, title, ingredients, time }) => {
   const handleHeartClick = () => {
     setIsLiked(!isLiked);
   };
-
+0
   return (
     <div className="pt-[16vh]">
       <div className=" bg-purple-100 rounded-lg shadow-lg overflow-hidden p-4 relative">
@@ -50,6 +50,8 @@ const Card = ({ image, title, ingredients, time }) => {
         </div>
       </div>
     </div>
+
+  
   );
 };
 
