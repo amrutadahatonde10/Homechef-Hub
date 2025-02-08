@@ -9,14 +9,25 @@ const recipes = [
   },
   {
     id: 2,
-    image: 'https://imgs.search.brave.com/Pgs_9p4ySSKCTsSA_in99y-9RnNfpI_LyhyIrH8Semg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE0/NDc4MDc0MC9waG90/by90b21hdG8tc291/cC1vbi13b29kZW4t/dGFibGUtYmFja2dy/b3VuZC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9S2V2N2JV/amJYVHBYbnF1MDJK/VXFYSl9JRkF1NGI3/ZmRCdDBsVUtuc1dl/UT0',
-    title: 'Tomato Soup'
+    image: 'https://imgs.search.brave.com/UKqSZavjqVZxBPnfNF6SRrN8HyWC0FOIqsnr3UZUe-w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2RlbC5oLWNk/bi5jby9hc3NldHMv/MTcvMjIvNjQweDk1/OS9nYWxsZXJ5LTE0/OTYxNjYzMjEtZGVs/aXNoLXZlZ2dpZS1i/dXJnZXJzLXBpbi0x/LTEwMjQuanBnP3Jl/c2l6ZT05ODA6Kg',
+    title: 'Veg Burger'
   },
   {
     id: 3,
-    image: 'https://imgs.search.brave.com/ZpaY4AaZlsVhWdgUcEDwrf1cVVgFVPNzV4HGHNKN3dI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjgw/MjY4MTkwL3Bob3Rv/L21pc28tcmFtZW4t/bm9vZGxlLXNvdXAu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWgzQlNSanlDYkZo/SHF3b1FwcGlMc2Ny/M2lHS3VIZFIzdU5K/dXU4U1phMkU9',
-    title: 'Noodles'
+    image: 'https://imgs.search.brave.com/gHwXjR-WBNXuRFrgRC9VHvzjYg_JIr768XapxFhMrPI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXdlc29tZWN1aXNp/bmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAyL1Zh/ZGEtcGFhdi5wbmc',
+    title: 'Vada Pav'
+  },
+  {
+    id: 4,
+    image: 'https://imgs.search.brave.com/ZyuJAhiMhHTNkMKkgJZmpMFBidFwsId2WXVxxb1Us5U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvcnlwaWNrLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/NC8wOS9QYXYtQmhh/amkuanBn',
+    title: 'Pav-Bhaji'
+  },
+  {
+    id: 5,
+    image: 'https://imgs.search.brave.com/ucRUOpdWEU2-RC66urFxI192qnl8cZldnHnnv_pJHCU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NDkzMWQyYWVlMTg1/MTBiNDdmNGJiMWYv/NjVkZmIwYjQ5NzBl/ZTE2NGQxN2RhNzAx/X1NhYnVkYW5hLUto/aWNoZGkuanBlZw',
+    title: 'Sabudana Khichdi'
   }
+
 ];  
 
 const Card4 = () => {
@@ -25,18 +36,18 @@ const Card4 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % recipes.length);
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="pt-[16vh] flex justify-center items-center">
-      <div className="relative w-[500px] h-[530px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden">
+      <div className="relative w-[500px] h-[530px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden ">
         
         {/* Animated "Latest Recipes" Title */}
         <motion.h2 
-          className="text-3xl px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
+          className="text-2xl mt-4 px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
           animate={{
             y: [0, -10, 0], 
             textShadow: ["0px 0px 5px #fff", "0px 0px 20px #ff0", "0px 0px 5px #fff"], 
@@ -52,7 +63,7 @@ const Card4 = () => {
           key={recipes[activeIndex].id}
           src={recipes[activeIndex].image}
           alt={recipes[activeIndex].title}
-          className="w-[300px] h-80 object-cover rounded-lg shadow-lg mt-4      "
+          className="w-[300px] h-80 object-cover rounded-lg shadow-lg mt-6 mb-4"
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "-100%" }}
