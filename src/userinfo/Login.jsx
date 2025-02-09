@@ -1,9 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
- 
->>>>>>> 3be7cc0199700f8f779296f699ed460ac7b4fab4
 
 function Login({ onSwitchForm }) {
   const username = useRef(null);
