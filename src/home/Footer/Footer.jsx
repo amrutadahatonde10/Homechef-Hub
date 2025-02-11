@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Us */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">HomeChef Hub</h2>
-          <p>
+          <h2 className="text-xl font-semibold mb-4 ml-5">HomeChef Hub</h2>
+          <p className= "ml-5">
             Your go-to platform for discovering and sharing homemade recipes and
             culinary expertise. Join a vibrant community of passionate home
             chefs today!
