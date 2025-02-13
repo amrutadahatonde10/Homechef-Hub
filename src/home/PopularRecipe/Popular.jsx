@@ -37,14 +37,14 @@ const Popular = () => {
       </div>
     );
   };
-
+   
   return (
     <div className="w-full p-6">
       <div className="grid grid-cols-3 gap-4">
         {popularRecipes.map((recipe) => (
           <div key={recipe.Id} className="rounded-lg overflow-hidden text-center">
             <img
-              src={recipe.Image}
+              src={recipe.Image} 
               alt={recipe.RecipeName}
               className="w-full h-60 object-cover rounded-lg"
             />
