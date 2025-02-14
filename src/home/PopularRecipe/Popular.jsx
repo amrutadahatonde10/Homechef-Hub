@@ -15,7 +15,7 @@ const Popular = () => {
       } catch (error) {
         console.error("Error fetching recipes:", error);  
       }
-    };
+    };     
 
     fetchRecipes();
   }, []);
