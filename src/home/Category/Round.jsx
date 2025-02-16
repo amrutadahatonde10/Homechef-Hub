@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const categories = [
   {
@@ -48,7 +49,7 @@ const Round = () => {
             />
           </div>
           <div className="h-10 mt-2 flex items-center justify-center bg-white border border-purple-300 rounded-md shadow-md w-40">
-            <p className="hover:text-gray-500 font-medium">{category.name}</p>
+            <Link to="/breakfast" className="hover:text-gray-500 font-medium">{category.name}</Link>
           </div>
         </div>
       ))}
