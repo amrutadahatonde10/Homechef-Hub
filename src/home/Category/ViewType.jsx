@@ -12,6 +12,7 @@ const recipes = [
     Ingredients: "Paneer, Yogurt, Spices, Capsicum, Onion, Tomato, Garlic",
     Time: 83,
     Type: "Dinner",
+    
   },
   {
     id: 2,
@@ -35,7 +36,7 @@ const recipes = [
     RecipeName: "Beetroot Salad",
     Ingredients: "Beetroot, Carrots, Lettuce, Olive oil, Lemon juice, Spices, Feta cheese",
     Time: 87,
-    Type: "Breakfast"
+    Type: "Salad"
   },
   {
     id: 5,
@@ -47,28 +48,61 @@ const recipes = [
   },
   {
     id: 6,
-    Image: "https://imgs.search.brave.com/Pgs_9p4ySSKCTsSA_in99y-9RnNfpI_LyhyIrH8Semg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE0/NDc4MDc0MC9waG90/by90b21hdG8tc291/cC1vbi13b29kZW4t/dGFibGUtYmFja2dy/b3VuZC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9S2V2N2JV/amJYVHBYbnF1MDJK/VXFYSl9JRkF1NGI3/ZmRCdDBsVUtuc1dl/UT0",
-    RecipeName: "Tomato Soup",
-    Ingredients: "Tomatoes, Garlic, Onions, Spices, Carrots, Basil, Olive oil",
-    Time: 45,
-    Type: "Soup",
+    Image: "https://imgs.search.brave.com/wqs2qYcP7vWJ79BvNg83qclrpoo0FjFMs_Eb7IBSh0E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzNmLzgx/LzY3LzNmODE2N2Fk/MDkwODYzOTdjOWFm/Y2MyNjA4ZThlZGQz/LmpwZw",
+    RecipeName: "Noodles",
+    Ingredients: "Noodles, Vegetables, Soy sauce, Spices, Ginger, Garlic, Sesame oil",
+    Time: 48,
+    Type: "Snack",
   },
   {
     id: 7,
-    Image: "https://via.placeholder.com/150",
-    RecipeName: "Caesar Salad",
-    Ingredients: "Lettuce, Croutons, Chicken, Parmesan, Caesar Dressing",
-    Time: 15,
-    Type: "Lunch",
+    Image: "https://imgs.search.brave.com/TcIk-8eANK7rpECz-jogmgZYED23WH7BVmxUujN9NPs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ob3QtZ29sZGVu/LWZyZW5jaC1mcmll/cy13aXRoLXNhdWNl/LXdvb2Rlbi1iYWNr/Z3JvdW5kLWhvbWVt/YWRlLXJ1c3RpYy1m/b29kXzE4Mzc5My00/MjcuanBnP3NlbXQ9/YWlzX2h5YnJpZA",
+    RecipeName: "French Fries",
+    Ingredients: "Potatoes, Olive Oil, Salt, Pepper, Paprika, Garlic powder, Parsley",
+    Time: 30,
+    Type: "Snack",
   },
   {
     id: 8,
-    Image: "https://via.placeholder.com/150",
-    RecipeName: "Pancakes",
-    Ingredients: "Flour, Eggs, Milk, Sugar, Baking Powder",
-    Time: 20,
+    Image: "https://imgs.search.brave.com/vsa1SKauP7nsrnk3cCF7ZHQmpF09MxF0uJP3pJobsjI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3cy4xMjNyZi5j/b20vaW1hZ2VzL2Vz/cGllcy9lc3BpZXMy/MTExL2VzcGllczIx/MTEwMjE3OC8xNzc4/NTEzNjEtbWlzYWwt/cGF2LWlzLWEtcG9w/dWxhci1tYWhhcmFz/aHRyaWFuLXN0cmVl/dC1mb29kLW9mLXVz/YWwtc3Byb3V0cy1j/dXJyeS10b3BwZWQt/d2l0aC1vbmlvbnMu/anBn",
+    RecipeName: "Misal Pav",
+    Ingredients: "Matki (moth beans), Onion, Tomato, Red Chili Powder, Turmeric, Pav (Bread Rolls), Farsan",
+    Time: 45,
     Type: "Breakfast",
   },
+  {
+    id: 9,
+    Image: "https://imgs.search.brave.com/VhMWjVkpqU-1t6wuVfstDBxmylUJzbaTn0sx5MWqcBc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9iaGFq/YW5pLXRoYWxpcGVl/dGgtYmhhamFuaS10/aGFsaXBlZXRoLW11/bHRpLWdyYWluLXBh/bmNha2UtcG9wdWxh/ci1zbmFjay1tYWhh/cmFzaHRyYS0xNTc4/MjE4NjIuanBn",
+    RecipeName: "Thalipeeth",
+    Ingredients: "Bhajani Flour, Onion, Green Chili, Coriander, Cumin Seeds, Salt, Ghee",
+    Time: 30,
+    Type: "Snack",
+  },
+  {
+    id: 10,
+    Image: "https://imgs.search.brave.com/_7MrXiiT1en-DvaucKe3r4YY8ojqbvRI6PeB2w_koZU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAzLzE1Lzg1LzI0/LzM2MF9GXzMxNTg1/MjQwNF9PR3lLbDYz/NE9DZGp2bXR4a29v/TWVaejkwZ3ZucjhP/NS5qcGc",
+    RecipeName: "Pithla Bhakri",
+    Ingredients: "Gram Flour (Besan), Onion, Green Chili, Turmeric, Jowar Bhakri, Coriander, Salt",
+    Time: 25,
+    Type: "Dinner",
+  },
+  {
+    id: 11,
+    Image: "https://imgs.search.brave.com/VoFlOHH0COhnMiZLTRnbo1Xo3xGE3JQDsrMCXe9rcqQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTE5/MTQxNTYwL3Bob3Rv/L3BvaGEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUtiVDFY/Q1VLT2pkbUZweFNa/Y3hRSXVDb2NGVlQ2/VmZBQ2NSWnhuWFBl/SW89",
+    RecipeName: "Kanda Pohe",
+    Ingredients: "Flattened Rice (Poha), Onion, Green Chili, Turmeric, Curry Leaves, Coriander, Salt",
+    Time: 15,
+    Type: "Breakfast",
+  },
+  {
+    id: 12,
+    Image: "https://imgs.search.brave.com/Pf1IeNkoBmDM0bkDKyTW5tt5ziiwWeNXehSlKJp5G1Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bXlnaW5nZXJnYXJs/aWNraXRjaGVuLmNv/bS9pbWFnZXMvODAw/cHgvODAwcHgtZGFs/LXBhbGFrLTEuanBn",
+    RecipeName: "Dal Palak",
+    Ingredients: "Split Pigeon Pea (Toor Dal), Spinach, Garlic, Green Chili, Turmeric, Ghee, Salt",
+    Time: 30,
+    Type: "Healthy",
+  },
+  
 ];
 
 const Card = ({ image, title, ingredients, time, type }) => {
@@ -83,6 +117,7 @@ const Card = ({ image, title, ingredients, time, type }) => {
     setRating(newRating);
   };
 
+  
   return (
     <div className="bg-purple-100 p-4 rounded-lg shadow-lg overflow-hidden relative">
       <img
@@ -162,3 +197,5 @@ const ViewType = () => {
 };
 
 export default ViewType;
+
+
