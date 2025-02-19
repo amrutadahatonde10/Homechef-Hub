@@ -20,7 +20,7 @@ const recipes = [
     RecipeName: "Tomato Soup",
     Ingredients: "Tomatoes, Garlic, Onions, Spices, Carrots, Basil, Olive oil",
     Time: 30,
-    Type: "Soup",
+    Type: "Soup", 
   },
   {
     id: 3,
