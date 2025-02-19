@@ -81,7 +81,7 @@ function RecipeForm() {
         <Navbar1 />
         <Navbar2 />
       </div>
-      <div className="flex justify-center mt-18 p-4">
+      <div className=" bg-gradient-to-r from-orange-200 to-purple-200 flex justify-center mt-18 p-4 pt-12">
         <div className="bg-gray-100 rounded-lg shadow-md w-full max-w-2xl ml-50 mt-20">
           <h3 className="text-center text-2xl font-bold mb-4">YOUR RECIPE DETAILS</h3>
           <form id="recipe-form" onSubmit={handleSubmit}>

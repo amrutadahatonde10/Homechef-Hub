@@ -23,7 +23,7 @@ function Admin_login() {
     <Navbar1 />   
     <Navbar2 />
     </div>
-    <div className="bg-zinc-200 bg-cover flex items-center justify-center min-h-screen overflow-auto p-20">
+    <div className=" bg-gradient-to-r from-orange-200 to-purple-200 bg-cover flex items-center justify-center min-h-screen overflow-auto p-20">
     <div className="bg-white w-full max-w-[500px] p-6 shadow-lg border rounded-lg mt-5">
     <div className="flex items-center justify-start mb-4 gap-20">
     <img src={img} alt="Admin Logo" className="w-20 h-20 object-contain" />
