@@ -96,9 +96,9 @@ function Login({ onSwitchForm }) {
             </Link>
           </p>
           <p className="text-sm text-gray-600 mt-2">
-         Admin login{" "}
-         <Link to="/admin" className="text-blue-500 hover:text-red-700 font-semibold">
-         here
+          login as{" "}
+         <Link to="/admin" className="text-blue-500 hover:text-red-700 ">
+         Admin
         </Link>
   </p>
         </div>

@@ -36,7 +36,10 @@ const Round = () => {
   return (
     <div
       className="grid grid-cols-7 gap-2 p-4 "
-      style={{ background: "linear-gradient(to right,rgb(247, 220, 209),rgb(226, 198, 245))" }}
+      style={{
+        background:
+          "linear-gradient(to right,rgb(247, 220, 209),rgb(226, 198, 245))",
+      }}
     >
       {categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">
@@ -44,12 +47,20 @@ const Round = () => {
             <img
               src={category.img}
               alt={category.name}
-
               className="w-full h-full object-cover shadow-32l"
             />
           </div>
           <div className="h-10 mt-2 flex items-center justify-center bg-white border border-purple-300 rounded-md shadow-md w-40">
-            <Link to="/breakfast" className="hover:text-gray-500 font-medium">{category.name}</Link>
+            <Link
+              to="/breakfast" // Navigate to the category-specific route
+              onClick={() => {
+                // Save category name to localStorage
+                localStorage.setItem("name", category.name);
+              }}
+              className="hover:text-gray-500 font-medium"
+            >
+              {category.name}
+            </Link>
           </div>
         </div>
       ))}
