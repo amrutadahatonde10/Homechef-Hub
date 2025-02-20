@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar1 from './Navbar/Navbar1';
-import Navbar2 from './Navbar/Navbar2';
+import Navbar2 from './Navbar/Navbar2'; 
 import Cards from './LatestRecipe/Cards';
 import Round from './Category/Round';
 import Adv from './Advertise/Adv';
