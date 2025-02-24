@@ -6,8 +6,8 @@ import Round from './Category/Round';
 import Adv from './Advertise/Adv';
 import Pop from './PopularRecipe/Pop';
 import Popular from './PopularRecipe/Popular';
-// import Collaboration from './Collaboration';
 import Footer from './Footer/Footer';
+// import AllRecipe from './Recipes/AllRecipe'; 
 
 
 const Home = () => {
@@ -21,8 +21,8 @@ const Home = () => {
     <Adv />
     <Pop val={"Popular Recipes"}/>
     <Popular />
-     {/* <Collaboration /> */}
-     <Footer />
+    <Footer />
+     {/* <AllRecipe /> */}
 
     </div>
   )

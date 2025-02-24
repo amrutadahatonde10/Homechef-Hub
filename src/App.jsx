@@ -10,12 +10,14 @@ import Admin_login from './home/Admin/Admin_login';
 import RecipeTypes from './home/Navbar/RecipeTypes';
 import RecipeDetail from './home/Navbar/RecipeDetail';
 
+import AllRecipe from './home/Recipes/AllRecipe';
+
 const App = () => {
   
   return (
     
    <div>
-      <Routes>
+      <Routes>        
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
@@ -26,6 +28,8 @@ const App = () => {
         {/* <Route exact path="/recipe-details" element={<RecipeDetails />} />    */}
         <Route path="/recipes/:type" element={<RecipeTypes />} />  
         <Route path="/recipe/:id" element={<RecipeDetail />} />
+
+        <Route path="/AllRecipe" element={<AllRecipe />} />  
       </Routes> 
    </div>
   );
