@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/recipes/:type" element={<RecipeTypes />} />  
         <Route path="/recipe/:id" element={<RecipeDetail />} />
 
-        <Route path="/AllRecipe" element={<AllRecipe />} />  
+        <Route path="/Recipes" element={<AllRecipe />} />  
       </Routes> 
    </div>
   );

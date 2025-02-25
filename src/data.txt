@@ -368,7 +368,7 @@
     "Ingredients": "Tomatoes, Garlic, Onions, Spices, Carrots, Basil, Olive oil",
     "Rating": 33,
     "Id": "2",
-    "Type": "Lunch"
+    "Type": "Soup"
   },
   {
     "Image": "https://imgs.search.brave.com/ZpaY4AaZlsVhWdgUcEDwrf1cVVgFVPNzV4HGHNKN3dI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjgw/MjY4MTkwL3Bob3Rv/L21pc28tcmFtZW4t/bm9vZGxlLXNvdXAu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWgzQlNSanlDYkZo/SHF3b1FwcGlMc2Ny/M2lHS3VIZFIzdU5K/dXU4U1phMkU9",
@@ -383,19 +383,19 @@
     "Image": "https://imgs.search.brave.com/gHwXjR-WBNXuRFrgRC9VHvzjYg_JIr768XapxFhMrPI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXdlc29tZWN1aXNp/bmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAyL1Zh/ZGEtcGFhdi5wbmc",
     "RecipeName": "Vada Pav",
     "Time": 67,
-    "Ingredients": "Potato, Bread, Spices, Garlic, Green chili, Coriander",
+    "Ingredients": "Potato, Bread, Spices, Garlic, Green chili, Coriander, Turmeric",
     "Rating": 12,
     "Id": "4",
-    "Type": "Lunch"
+    "Type": "Breakfast"
   },
   {
     "Image": "https://imgs.search.brave.com/UKqSZavjqVZxBPnfNF6SRrN8HyWC0FOIqsnr3UZUe-w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2RlbC5oLWNk/bi5jby9hc3NldHMv/MTcvMjIvNjQweDk1/OS9nYWxsZXJ5LTE0/OTYxNjYzMjEtZGVs/aXNoLXZlZ2dpZS1i/dXJnZXJzLXBpbi0x/LTEwMjQuanBnP3Jl/c2l6ZT05ODA6Kg",
     "RecipeName": "Veg Burger",
     "Time": 15,
-    "Ingredients": "Burger bun, Vegetables, Patty, Cheese, Mayonnaise, Lettuce",
+    "Ingredients": "Burger bun, Vegetables, Patty, Cheese, Mayonnaise, Lettuce, Potatoes",
     "Rating": 95,
     "Id": "5",
-    "Type": "Lunch"
+    "Type": "Dinner"
   },
   {
     "Image": "https://imgs.search.brave.com/ZyuJAhiMhHTNkMKkgJZmpMFBidFwsId2WXVxxb1Us5U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvcnlwaWNrLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/NC8wOS9QYXYtQmhh/amkuanBn",
@@ -404,7 +404,7 @@
     "Ingredients": "Potatoes, Tomatoes, Capsicum, Peas, Butter, Spices, Pav bread",
     "Rating": 72,
     "Id": "6",
-    "Type": "Lunch"
+    "Type": "Snack"
   },
   {
     "Image": "https://imgs.search.brave.com/ckXEO3nP4Qmh5qvc-oG640qjb5OPq49XfheegW2S8Io/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8w/LzBiL0RhbEJhdGku/anBn",
@@ -419,10 +419,10 @@
     "Image": "https://imgs.search.brave.com/ucRUOpdWEU2-RC66urFxI192qnl8cZldnHnnv_pJHCU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NDkzMWQyYWVlMTg1/MTBiNDdmNGJiMWYv/NjVkZmIwYjQ5NzBl/ZTE2NGQxN2RhNzAx/X1NhYnVkYW5hLUto/aWNoZGkuanBlZw",
     "RecipeName": "Sabudana Khichdi",
     "Time": 31,
-    "Ingredients": "Sabudana, Peanuts, Potatoes, Spices, Curry leaves",
+    "Ingredients": "Sabudana, Peanuts, Potatoes, Green Chilies, Salt, Ghee, lemon Juice",
     "Rating": 94,
     "Id": "8",
-    "Type": "Lunch"
+    "Type": "Dinner"
   },
   {
     "Image": "https://imgs.search.brave.com/WzgH7SQm4puaRpPyEpGJy2uPYQYbjY7_njIQR1fjidY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzAzLzQ5LzEz/LzM2MF9GXzkwMzQ5/MTMxNl9DSWE4dUJH/QzhTdGI0Q3RheWdz/NWtyMFNGVlR0MXhV/bi5qcGc",
@@ -431,22 +431,22 @@
     "Ingredients": "Paneer, Yogurt, Spices, Capsicum, Onion, Tomato, Garlic",
     "Rating": 4.5,
     "Id": "9",
-    "Type": "Lunch"
+    "Type": "Healthy"
   },
   {
     "Image": "https://imgs.search.brave.com/cGBh_UDKGcBySVZVt4XVojAS8rcfKq9pq2jktxfxoh8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc5/MDg1NDk0L3Bob3Rv/L2luZGlhbi1iaXJ5/YW5pLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1WSkFVZml1/YXZGWUI3UFh3aXN2/VWhMcVdGSjIwLTlt/MDg3LWN6VUpwOUZz/PQ",
     "RecipeName": "Biryani",
     "Time": 29,
-    "Ingredients": "Rice, Vegetables, Spices, Yogurt, Onions, Saffron",
+    "Ingredients": "Rice, Vegetables, Spices, Yogurt, Onions, Saffron, Turmeric",
     "Rating": 4,
     "Id": "10",
-    "Type": "Lunch"
+    "Type": "Dinner"
   },
   {
     "Image": "https://imgs.search.brave.com/u5kV2H_vuK98FqLwkEiWNupv-XOBA0ElFC_37yJZ0ag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzYxLzk2LzEx/LzM2MF9GXzc2MTk2/MTEwM19ickh2TDFF/cExBTnFkcDFVVnJq/VUxhc3NVWDlmMWhY/Ry5qcGc",
     "RecipeName": "Chole Bhature",
     "Time": 60,
-    "Ingredients": "Chickpeas, Flour, Spices, Yogurt, Oil",
+    "Ingredients": "Chickpeas, Flour, Spices, Yogurt, Oil, Coriander, Garlic-Ginger",
     "Rating": 5,
     "Id": "11",
     "Type": "Lunch"
@@ -458,7 +458,7 @@
     "Ingredients": "Beetroot, Carrots, Lettuce, Olive oil, Lemon juice, Spices, Feta cheese",
     "Rating": 4.7,
     "Id": "12",
-    "Type": "Lunch"
+    "Type": "Salads"
   },
   {
     "Image": "https://imgs.search.brave.com/wqs2qYcP7vWJ79BvNg83qclrpoo0FjFMs_Eb7IBSh0E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzNmLzgx/LzY3LzNmODE2N2Fk/MDkwODYzOTdjOWFm/Y2MyNjA4ZThlZGQz/LmpwZw",
@@ -473,10 +473,10 @@
     "Image": "https://imgs.search.brave.com/3VwGlgbboyhZeveR-tOJRfoZjUyckV8vVNF52v-O5sk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMi8x/Mi8yOC8xNy80NS9t/b3RpY2hvb3ItNzY4/MzQ4N182NDAuanBn",
     "RecipeName": "Ladoo",
     "Time": 46,
-    "Ingredients": "Gram flour, Sugar, Ghee, Cardamom, Nuts",
+    "Ingredients": "Gram flour, Sugar, Ghee, Cardamom, Nuts, Raisins, Pinch of Salt",
     "Rating": 4.8,
     "Id": "14",
-    "Type": "Lunch"
+    "Type": "Snack"
   },
   {
     "Image": "https://imgs.search.brave.com/WzgH7SQm4puaRpPyEpGJy2uPYQYbjY7_njIQR1fjidY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzAzLzQ5LzEz/LzM2MF9GXzkwMzQ5/MTMxNl9DSWE4dUJH/QzhTdGI0Q3RheWdz/NWtyMFNGVlR0MXhV/bi5qcGc",

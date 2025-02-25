@@ -55,36 +55,32 @@ const Navbar2 = () => {
             <ul className="flex ml-5 space-x-10 mt-1">
               <li>
                 <a
-                  href="#"
-                  className="text-base hover:text-gray-500 transition duration-300"
+                  href="/"
+                  className="text-base hover:text-gray-500"
                 >
                   <b>Home</b>
                 </a>
               </li>
               <li>
                 <a
-                  href="#about"
-                  className="text-base hover:text-gray-500 transition duration-300"
+                  href="/about"
+                  className="text-base hover:text-gray-500"
                 >
                   <b>About</b>
                 </a>
               </li>
+
+              <li><a href="/recipes" className="text-base hover:text-gray-500 "><b>Recipes</b></a></li>
+
               <li>
                 <a
-                  href="#recipe"
-                  className="text-base hover:text-gray-500 transition duration-300"
-                >
-                  <b>Recipes</b>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
+                  href="/contact"
                   className="text-base hover:text-gray-500 transition duration-300"
                 >
                   <b>Contact</b>
                 </a>
               </li>
+
               <li><a href="/add-recipe" className="text-base hover:text-gray-500"><b>Add Recipe</b></a></li>
 
             </ul>

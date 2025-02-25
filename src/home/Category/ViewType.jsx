@@ -51,18 +51,18 @@ const Card = ({ image, title, ingredients, time, type }) => {
         ))}
       </div>
 
-      <h3 className="text-center text-xl font-semibold mt-4">{title}</h3>
-      <p className="text-sm mt-2 text-center">
+      <h3 className="text-center text-xl font-semibold mt-2">{title}</h3>
+      <p className="text-sm mt-1 text-center">
         <span className="font-semibold">Time:</span> {time} minutes
       </p>
-      <p className="text-sm mt-2 text-center font-semibold">{type}</p>
-      <h4 className="text-md font-semibold mt-2 text-center">Ingredients:</h4>
+      <p className="text-sm mt-1 text-center font-semibold text-purple-500">{type}</p>
+      <h4 className="text-md font-semibold mt-1 text-center">Ingredients:</h4>
       <ul className="list-disc pl-6 mt-2 text-gray-600 text-sm ml-[35%]">
         {ingredients.split(",").map((ingredient, index) => (
           <li key={index}>{ingredient.trim()}</li>
         ))}
       </ul>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 ml-2">
         <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
           View Recipe
         </button>
@@ -85,7 +85,7 @@ const ViewType = () => {
 
         // Fetch recipes from the API
         const { data } = await Axios().get("/login"); // Replace with your mock API endpoint
-        const slicedRecipes = data.slice(15, 26); // Slice the data for specific items
+        const slicedRecipes = data.slice(0, 26); // Slice the data for specific items
 
         // Filter recipes based on the saved type
         const filtered =
