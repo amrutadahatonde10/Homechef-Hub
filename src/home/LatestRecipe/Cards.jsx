@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import Card4 from "./Card4";
 import Axios from "../../Axios"; // Ensure Axios is correctly imported
+import Card from "../Recipes/Card";
 
 const Cards = () => {
   const [data, setData] = useState([]);
@@ -32,6 +32,8 @@ const Cards = () => {
   }
 
   return (
+    <div className="pt-[16vh] flex justify-center items-center">
+
     <div className="container mx-auto flex flex-col md:flex-row w-full gap-4 p-4">
       {/* Cards Container (75%) */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-[75%]">
@@ -50,6 +52,7 @@ const Cards = () => {
       <div className="w-full md:w-[25%]">
         <Card4 />
       </div>
+    </div>
     </div>
   );
 };

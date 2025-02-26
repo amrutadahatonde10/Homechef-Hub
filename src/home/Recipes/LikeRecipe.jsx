@@ -4,7 +4,7 @@ import Navbar2 from "../Navbar/Navbar2";
 import Axios from "../../Axios";
 import Card from "./Card";
 
-const AllRecipe = () => {
+const LikeRecipe = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,23 +39,23 @@ const AllRecipe = () => {
       <div className="pt-[16vh]">
         <div className="container mx-auto p-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {recipes.map((recipe) => (
-              <Card
-                key={recipe.Id}
-                id={recipe.Id}
-                image={recipe.Image}
-                title={recipe.RecipeName}
-                ingredients={recipe.Ingredients}
-                time={recipe.Time}
-                type={recipe.Type}
-                initialLike = {recipe.Like}
-              />
-            ))}
-          </div>
+            {recipes
+              .filter((recipe) => recipe.Like === true) // Filter recipes where Like is true
+              .map((recipe) => (
+                <Card
+                  key={recipe.Id}
+                  image={recipe.Image}
+                  title={recipe.RecipeName}
+                  ingredients={recipe.Ingredients}
+                  time={recipe.Time}
+                  type={recipe.Type}
+                />
+              ))}
+          </div>  
         </div>
       </div>
     </>
   );
 };
 
-export default AllRecipe;
+export default LikeRecipe;

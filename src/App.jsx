@@ -11,6 +11,7 @@ import RecipeTypes from './home/Navbar/RecipeTypes';
 import RecipeDetail from './home/Navbar/RecipeDetail';
 
 import AllRecipe from './home/Recipes/AllRecipe';
+import LikeRecipe from './home/Recipes/LikeRecipe';
 
 const App = () => {
   
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/recipe/:id" element={<RecipeDetail />} />
 
         <Route path="/Recipes" element={<AllRecipe />} />  
+        <Route path="/LikeRecipe" element={<LikeRecipe />} />
       </Routes> 
    </div>
   );

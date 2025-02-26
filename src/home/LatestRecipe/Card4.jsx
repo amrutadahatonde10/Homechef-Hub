@@ -43,7 +43,7 @@ const Card4 = () => {
   }
 
   return (
-    <div className="pt-[16vh] flex justify-center items-center">
+    <div className=" flex justify-center items-center">
       <div className="relative w-[500px] h-[530px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden">
         <motion.h2 
           className="text-2xl mt-4 px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
