@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar1 from "../Navbar/Navbar1";
 import Navbar2 from "../Navbar/Navbar2";
+import Footer from "../Footer/Footer";
 
 function RecipeForm() {
   const [formData, setFormData] = useState({
@@ -133,6 +134,7 @@ function RecipeForm() {
           </form>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
