@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { MdOutlineSearch } from "react-icons/md";
-import { useNavigate } from "react-router-dom"; //  Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Navbar2 = () => {
   const [query, setQuery] = useState("");
-  const [recipeTypes, setRecipeTypes] = useState([]); // To store unique recipe types
-  const [filteredTypes, setFilteredTypes] = useState([]); // Filtered search results
-  const navigate = useNavigate(); //  Initialize useNavigate()
+  const [recipes, setRecipes] = useState([]); 
+  const [filteredRecipes, setFilteredRecipes] = useState([]); 
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await fetch("https://679de9fe946b0e23c06214a8.mockapi.io/recipes");
+        const response = await fetch("https://67a71bbe510789ef0dfcfdc7.mockapi.io/api/login");
         const data = await response.json();
-
-        // Extract unique recipe types
-        const uniqueTypes = [...new Set(data.map(recipe => recipe.type))];
-        setRecipeTypes(uniqueTypes);
+        setRecipes(data);
       } catch (error) {
         console.error("Error fetching recipes:", error);
       }
@@ -27,92 +25,105 @@ const Navbar2 = () => {
 
   // Handle search input
   const handleSearch = (e) => {
-    const searchValue = e.target.value;
+    const searchValue = e.target.value.trim().toLowerCase();
     setQuery(searchValue);
-
-    // Filter recipe types based on search input
+  
     if (searchValue.length > 1) {
-      const filtered = recipeTypes.filter((type) =>
-        type.toLowerCase().includes(searchValue.toLowerCase())
-      );
-      setFilteredTypes(filtered);
+      // User input ko array me convert karna (comma-separated ingredients)
+      const searchIngredients = searchValue.split(",").map((ing) => ing.trim());
+  
+      const filtered = recipes.filter((recipe) => {
+        // Recipe ingredients ko array me convert karna
+        const ingredientsArray = typeof recipe.Ingredients === "string"
+          ? recipe.Ingredients.split(",").map((ing) => ing.trim().toLowerCase())
+          : recipe.Ingredients.map((ing) => ing.toLowerCase());
+  
+        // Check agar koi bhi ingredient match karta hai
+        return searchIngredients.every((searchIng) =>
+          ingredientsArray.some((ing) => ing.includes(searchIng))
+        );
+      });
+  
+      setFilteredRecipes(filtered);
+      setShowSuggestions(filtered.length > 0);
     } else {
-      setFilteredTypes([]); 
+      setFilteredRecipes([]);
+      setShowSuggestions(false);
+    }
+  };
+  
+  const handleRecipesClick = () => {
+    navigate("/recipes");
+  };
+
+
+  // Handle suggestion click
+  const handleSuggestionClick = (selectedRecipe) => {
+    setQuery(selectedRecipe.RecipeName); // Set search query as selected item
+    setShowSuggestions(false);
+    navigate("/search", { state: { results: [selectedRecipe] } }); // Navigate to search results page with selected recipe
+  };
+
+  // Navigate to Search Results Page
+  const handleSearchSubmit = () => {
+    if (filteredRecipes.length > 0) {
+      navigate("/search", { state: { results: filteredRecipes } }); // Send search results
+      setQuery(""); 
+      setFilteredRecipes([]); 
+      setShowSuggestions(false);
     }
   };
 
-  // Handle Recipe Type Click
-  const handleTypeClick = (type) => {
-    setQuery(type); 
-    navigate(`/recipes/${type}`); 
-  };
+
 
   return (
-    <div className="fixed top-[8vh] w-full z-40 bg-purple-300 ">
-      <div className="h-[8vh] w-full bg-purple-300 ">
-        <nav className="shadow-md py-2 ">
-          <div className="flex items-center justify-between ">
+    <div className="fixed top-[8vh] w-full z-40 bg-purple-300">
+      <div className="h-[8vh] w-full bg-purple-300">
+        <nav className="shadow-md py-2">
+          <div className="flex items-center justify-between">
             <ul className="flex ml-5 space-x-10 mt-1">
-              <li>
-                <a
-                  href="#"
-                  className="text-base hover:text-gray-500 transition duration-300"
-                >
-                  <b>Home</b>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-base hover:text-gray-500 transition duration-300"
-                >
-                  <b>About</b>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#recipe"
-                  className="text-base hover:text-gray-500 transition duration-300"
-                >
-                  <b>Recipes</b>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-base hover:text-gray-500 transition duration-300"
-                >
-                  <b>Contact</b>
-                </a>
-              </li>
+              <li><a href="/" className="text-base hover:text-gray-500"><b>Home</b></a></li>
+              <li><a href="#about" className="text-base hover:text-gray-500"><b>About</b></a></li>
+              <li><button onClick={handleRecipesClick} className="text-base hover:text-gray-500"><b>Recipes</b></button></li>
+              <li><a href="#contact" className="text-base hover:text-gray-500"><b>Contact</b></a></li>
               <li><a href="/add-recipe" className="text-base hover:text-gray-500"><b>Add Recipe</b></a></li>
-
             </ul>
 
+            {/* Search Box */}
             <div className="relative mr-2">
               <MdOutlineSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
               <input
                 type="text"
-                
                 value={query}
                 onChange={handleSearch}
-                placeholder="Search By Ingredients"
+                placeholder="Search by Ingredients..."
                 className="pl-6 rounded-md border-2 w-96 h-10"
+                onKeyDown={(e) => e.key === "Enter" && handleSearchSubmit()}
               />
-              {/* Search Suggestions Dropdown */}
-              {filteredTypes.length > 0 && (
-                <div className="absolute bg-white border rounded-md mt-1 w-96 max-h-40 overflow-y-auto shadow-lg">
-                  {filteredTypes.map((type, index) => (
-                    <div 
-                      key={index} 
-                      className="p-2 hover:bg-gray-100 cursor-pointer"
-                      onClick={() => handleTypeClick(type)} //  Updated Event
-                    >
-                      {type}
-                    </div>
-                  ))}
-                </div>
+
+              {/* Suggestions Dropdown */}
+              {showSuggestions && (
+                <ul className="absolute top-12 left-0 bg-white border rounded-md w-96 shadow-lg max-h-40 overflow-y-auto">
+                  {filteredRecipes.length > 0 ? (
+                    filteredRecipes.map((recipe) => (
+                      <li
+                        key={recipe.id}
+                        className="p-2 hover:bg-gray-200 cursor-pointer"
+                        onClick={() => handleSuggestionClick(recipe)}
+                      >
+                        {recipe.RecipeName}
+                      </li>
+                    ))
+                  ) : (
+                    <li className="p-2 text-gray-500">No matches found</li>
+                  )}
+                </ul>
               )}
+
+              {/* Search Button */}
+              <button onClick={handleSearchSubmit} className="ml-2 bg-purple-500 text-white px-4 py-2 rounded-md">
+                Search
+              </button>
             </div>
           </div>
         </nav>
