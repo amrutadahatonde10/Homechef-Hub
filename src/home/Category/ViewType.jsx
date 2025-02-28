@@ -14,7 +14,7 @@ const Card = ({ image, title, ingredients, time, type }) => {
     setIsLiked(!isLiked);
   };
 
-  const handleRating = (newRating) => {
+  const handleRating = (newRating) => { 
     setRating(newRating);
   };
 
