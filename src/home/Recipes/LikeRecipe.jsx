@@ -40,7 +40,7 @@ const LikeRecipe = () => {
         <div className="container mx-auto p-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {recipes
-              .filter((recipe) => recipe.Like === true) // Filter recipes where Like is true
+              .filter((recipe) => recipe.Like === true ) // Filter recipes where Like is true
               .map((recipe) => (
                 <Card
                   key={recipe.Id}

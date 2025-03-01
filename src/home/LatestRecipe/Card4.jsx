@@ -24,11 +24,11 @@ const Card4 = () => {
     fetchRecipes();
   }, []);
   
-
+ 
   useEffect(() => {
     if (recipes.length > 0) {
       const interval = setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % recipes.length);
+        setActiveIndex((prev) => (prev + 1) % recipes.length);   
       }, 3000);
       return () => clearInterval(interval);
     }
@@ -42,11 +42,11 @@ const Card4 = () => {
     return <div className="text-center text-red-600">{error}</div>;
   }
 
-  return (
+  return (  
     <div className=" flex justify-center items-center">
-      <div className="relative w-[500px] h-[530px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden">
+      <div className="relative w-[500px] h-[562px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden">
         <motion.h2 
-          className="text-2xl mt-4 px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
+          className="text-2xl mt-5 px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
           animate={{
             y: [0, -10, 0], 
             textShadow: ["0px 0px 5px #fff", "0px 0px 20px #ff0", "0px 0px 5px #fff"], 
@@ -55,13 +55,13 @@ const Card4 = () => {
           whileHover={{ scale: 1.1 }}
         >
           ✨ Latest Recipes ✨
-        </motion.h2>
+        </motion.h2>z
 
         <motion.img
           key={recipes[activeIndex]?.id}
           src={recipes[activeIndex]?.Image}
           alt={recipes[activeIndex]?.RecipeName}
-          className="w-[300px] h-80 object-cover rounded-lg shadow-lg mt-6 mb-4"
+          className="w-[300px] h-80 object-cover rounded-lg shadow-lg mt-8 mb-2"
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "-100%" }}
@@ -70,7 +70,7 @@ const Card4 = () => {
 
         <motion.p
           key={recipes[activeIndex]?.RecipeName}
-          className="mt-4 text-2xl text-purple-900 font-bold"
+          className="mt-6 text-2xl text-purple-900 font-bold"
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "-100%" }}

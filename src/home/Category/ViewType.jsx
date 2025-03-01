@@ -118,6 +118,7 @@ const ViewType = () => {
                 time={recipe.Time}
                 type={recipe.Type}
                 rating={recipe.Rating}
+
               />
             ))}
           </div>

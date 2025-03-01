@@ -37,14 +37,17 @@ const Cards = () => {
     <div className="container mx-auto flex flex-col md:flex-row w-full gap-4 p-4">
       {/* Cards Container (75%) */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-[75%]">
-        {data.slice(0, 3).map((card) => (
+        {data.slice(0, 3).map((recipe) => (
           <Card
-            key={card.id}
-            image={card.Image}
-            title={card.RecipeName}
-            ingredients={card.Ingredients}
-            time={card.Time}
-          />
+          key={recipe.Id}
+          id={recipe.Id}
+          image={recipe.Image}
+          title={recipe.RecipeName}
+          ingredients={recipe.Ingredients}
+          time={recipe.Time}
+          type={recipe.Type}
+          initialLike = {recipe.Like}
+        />
         ))}
       </div>
 
