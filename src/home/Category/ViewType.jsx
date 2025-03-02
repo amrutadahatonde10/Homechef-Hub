@@ -3,7 +3,7 @@ import { IoMdHeart } from "react-icons/io";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Navbar1 from "../Navbar/Navbar1";
 import Navbar2 from "../Navbar/Navbar2";
-import Axios from "../../Axios";
+import Axios from "../../Axios"; 
 
 
 const Card = ({ image, title, ingredients, time, type }) => {
