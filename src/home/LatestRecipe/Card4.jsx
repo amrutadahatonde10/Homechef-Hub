@@ -55,7 +55,7 @@ const Card4 = () => {
           whileHover={{ scale: 1.1 }}
         >
           ✨ Latest Recipes ✨
-        </motion.h2>z
+        </motion.h2>
 
         <motion.img
           key={recipes[activeIndex]?.id}

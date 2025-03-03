@@ -82,7 +82,6 @@ const Navbar2 = () => {
         <nav className="shadow-md py-2">
           <div className="flex items-center justify-between">
             <ul className="flex ml-5 space-x-10 mt-1">
-<<<<<<< HEAD
               <li>
                 <a
                   href="/"
@@ -111,12 +110,6 @@ const Navbar2 = () => {
                 </a>
               </li>
 
-=======
-              <li><a href="/" className="text-base hover:text-gray-500"><b>Home</b></a></li>
-              <li><a href="#about" className="text-base hover:text-gray-500"><b>About</b></a></li>
-              <li><button onClick={handleRecipesClick} className="text-base hover:text-gray-500"><b>Recipes</b></button></li>
-              <li><a href="#contact" className="text-base hover:text-gray-500"><b>Contact</b></a></li>
->>>>>>> origin/satyam
               <li><a href="/add-recipe" className="text-base hover:text-gray-500"><b>Add Recipe</b></a></li>
             </ul>
 

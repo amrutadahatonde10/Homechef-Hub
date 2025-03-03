@@ -32,13 +32,9 @@ const App = () => {
         {/* <Route path="/recipes/:type" element={<RecipeTypes />} />   */}
         <Route path="/search" element={<SearchResults />} />
         <Route path="/recipe/:id" element={<RecipeDetail />} />
-<<<<<<< HEAD
 
         <Route path="/Recipes" element={<AllRecipe />} />  
         <Route path="/LikeRecipe" element={<LikeRecipe />} />
-=======
-        <Route path="recipes/" element={<Recipes/>} />
->>>>>>> origin/satyam
       </Routes> 
    </div>
   );
