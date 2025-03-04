@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { IoMdHeart } from "react-icons/io"; // Use the filled heart icon
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ image, title, ingredients, time }) => {
-  const [isLiked, setIsLiked] = useState(false); // State to track like status
+const Card = ({ id, image, title, ingredients, time }) => {
+  const [isLiked, setIsLiked] = useState(false);
+  const navigate = useNavigate();
 
   // Toggle like button color on click
   const handleHeartClick = () => {
@@ -48,12 +50,16 @@ const Card = ({ image, title, ingredients, time }) => {
         </ul>
 
         <div className="flex justify-center mt-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            onClick={() => navigate(`/recipes/${id}`)} // Navigate to recipe details
+          >
             View Recipe
           </button>
         </div>
       </div>
     </div>
+    
   );
 };
 

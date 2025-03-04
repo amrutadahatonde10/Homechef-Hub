@@ -14,7 +14,7 @@ const Footer = () => {
             chefs today!
           </p>
         </div>
-
+         
         {/* Quick Links */}
         <div>
           <h3 className="text-lg font-medium mb-4 ml-[15vh]">Quick Links</h3>

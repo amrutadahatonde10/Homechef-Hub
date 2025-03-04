@@ -37,7 +37,7 @@ const Cards = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-[75%]">
         {data.slice(0, 3).map((card) => (
           <Card
-            key={card.id}
+            key={card.Id}
             image={card.Image}
             title={card.RecipeName}
             ingredients={card.Ingredients}

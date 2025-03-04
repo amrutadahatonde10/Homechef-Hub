@@ -11,6 +11,8 @@ import Admin_login from './home/Admin/Admin_login';
 import RecipeDetail from './home/Navbar/RecipeDetail';
 import SearchResults from './home/Navbar/SearchResults';
 import Recipes from './home/Navbar/Recipes';
+import Dashboard from './home/Admin/Dashboard';
+import RecipesList from './home/Admin/RecipesList';
 
 const App = () => {
   
@@ -25,11 +27,17 @@ const App = () => {
         <Route exact path="/add-recipe" element={<RecipeForm />} />
 
         <Route exact path="/Admin" element={<Admin_login />} />
+        <Route exact path="/Dashboard" element={<Dashboard/>} />
+        
         {/* <Route exact path="/recipe-details" element={<RecipeDetails />} />    */}
         {/* <Route path="/recipes/:type" element={<RecipeTypes />} />   */}
         <Route path="/search" element={<SearchResults />} />
         <Route path="/recipe/:id" element={<RecipeDetail />} />
         <Route path="recipes/" element={<Recipes/>} />
+        <Route path="/recipes/:id" element={<RecipeDetail />} /> 
+        <Route path="/recipes/:Id" element={<RecipeDetail />} />
+        <Route path="/recipess" element={<RecipesList/>}/>
+       
       </Routes> 
    </div>
   );

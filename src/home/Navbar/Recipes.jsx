@@ -36,8 +36,8 @@ const Recipes = () => {
             ) : (
               recipes.map((recipe) => (
                 <Card
-                  key={recipe.id}
-                  id={recipe.id}
+                  key={recipe.Id}
+                  id={recipe.Id}
                   image={recipe.Image}
                   title={recipe.RecipeName}
                   ingredients={recipe.Ingredients}
@@ -74,7 +74,7 @@ const Card = ({ id, image, title, ingredients, time, type, navigate }) => {
         ))}
       </div>
 
-      <h3 className="text-center text-xl font-semibold mt-4">{title}</h3>
+      <h3 className="text-center text-xl git font-semibold mt-4">{title}</h3>
       <p className="text-sm mt-2 text-center"><span className="font-semibold">Time:</span> {time} minutes</p>
       <p className="text-sm mt-2 text-center font-semibold">{type}</p>
       <h4 className="text-md font-semibold mt-2 text-center">Ingredients:</h4>
@@ -84,7 +84,7 @@ const Card = ({ id, image, title, ingredients, time, type, navigate }) => {
         ))}
       </ul>
       <div className="flex justify-center mt-4">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => navigate(`/recipe/${id}`)}>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => navigate(`/recipes/${id}`)}>
           View Recipe
         </button>
       </div>
