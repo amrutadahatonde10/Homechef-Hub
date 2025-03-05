@@ -75,7 +75,7 @@ const RecipesList = () => {
       <h2 className=" text-3xl font-bold text-center mb-6">Edit & Save Recipes</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recipess.map((recipe) => (
-          <div key={recipe.Id} className="bg-white p-4 rounded-lg shadow-md">
+          <div key={recipe.Id} className="bg-purple-100 p-4 rounded-lg shadow-md">
             {editingId === recipe.Id ? (
               <>
                 <input type="text" name="RecipeName" value={editData.RecipeName} onChange={handleChange} className="w-full p-2 border rounded" placeholder="Recipe Name" />
@@ -99,7 +99,7 @@ const RecipesList = () => {
               </>
             ) : (
               <>
-                <img src={recipe.Image} alt={recipe.RecipeName} className="w-full h-32 object-cover rounded" />
+                <img src={recipe.Image} alt={recipe.RecipeName} className="w-full h-48 object-cover rounded-lg" />
                 <h3 className="text-xl font-semibold">{recipe.RecipeName}</h3>
                 <p className="text-gray-600">Type: {recipe.Type}</p>
                 <p className="text-gray-600">Time: {recipe.Time} min</p>

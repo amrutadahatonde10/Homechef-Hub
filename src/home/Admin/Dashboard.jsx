@@ -75,9 +75,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-
-      </div>
-      <div className="mt-2 p-6 bg-white shadow rounded-lg">
+        <div className="mt-2 p-6 bg-white shadow rounded-lg">
             <h2 className="text-xl font-semibold mb-4 ">Recipes per Category</h2>
             <ul className="list-disc pl-5 text-gray-700">
               {Object.entries(categoryData).map(([category, count]) => (
@@ -87,6 +85,9 @@ const Dashboard = () => {
               ))}
             </ul>
           </div>
+
+      </div>
+     
     </div>
     </div>
     <Footer/>
