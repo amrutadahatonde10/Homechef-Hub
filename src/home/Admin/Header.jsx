@@ -1,0 +1,20 @@
+import React from 'react';
+
+const Header = ({ onToggle }) => {
+  return (
+    <div className="bg-white py-4 px-6 border-b border-gray-300 flex justify-center items-center">
+       <div className='w-1/3'></div>
+      <h1 className="font-bold text-black-800 text-2xl text-center w-1/3">Admin</h1>
+      <div className='w-1/3 flex justify-end'>
+      <button
+        onClick={onToggle}
+        className="bg-blue-400 text-white px-4 py-2 rounded shadow hover:bg-blue-600"
+      >
+       <i className="ri-menu-line"></i>
+      </button>
+    </div>
+    </div>
+  );
+};
+
+export default Header;
