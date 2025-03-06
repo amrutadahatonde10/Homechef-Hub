@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';  
-import Axios from "../../Axios"; 
+import { motion } from 'framer-motion';
+import Axios from "../../Axios";
 
 const Card4 = () => {
   const [recipes, setRecipes] = useState([]);
@@ -12,8 +12,7 @@ const Card4 = () => {
     const fetchRecipes = async () => {
       try {
         const response = await Axios().get("/login"); // Adjust endpoint as needed
-        const slicedRecipes = response.data.slice(3, 8); // Get images from index 4 to 8
-        setRecipes(slicedRecipes);
+        setRecipes(response.data.slice(3, 8));
       } catch (err) {
         console.error("Error fetching recipes:", err);
         setError("Failed to load recipes");
@@ -23,12 +22,11 @@ const Card4 = () => {
     };
     fetchRecipes();
   }, []);
-  
- 
+
   useEffect(() => {
     if (recipes.length > 0) {
       const interval = setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % recipes.length);   
+        setActiveIndex((prev) => (prev + 1) % recipes.length);
       }, 3000);
       return () => clearInterval(interval);
     }
@@ -42,16 +40,18 @@ const Card4 = () => {
     return <div className="text-center text-red-600">{error}</div>;
   }
 
-  return (  
-    <div className=" flex justify-center items-center">
+  if (!recipes.length) return null; // Prevent render if no recipes
+
+  return (
+    <div className="flex justify-center items-center">
       <div className="relative w-[500px] h-[562px] bg-purple-100 flex flex-col items-center justify-start text-white text-xl font-semibold shadow-lg rounded-lg p-6 overflow-hidden">
-        <motion.h2 
+        <motion.h2
           className="text-2xl mt-5 px-5 bg-red-500 py-3 rounded-lg shadow-lg tracking-wider text-center"
           animate={{
-            y: [0, -10, 0], 
-            textShadow: ["0px 0px 5px #fff", "0px 0px 20px #ff0", "0px 0px 5px #fff"], 
-            transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+            y: [0, -10, 0],
+            textShadow: ["0px 0px 5px #fff", "0px 0px 20px #ff0", "0px 0px 5px #fff"],
           }}
+          transition={{ duration: 1.5, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
           whileHover={{ scale: 1.1 }}
         >
           ✨ Latest Recipes ✨
@@ -81,6 +81,6 @@ const Card4 = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Card4;
