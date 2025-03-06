@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MdOutlineSearch } from "react-icons/md";
+// import { MdOutlineSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const Navbar2 = () => {
@@ -91,7 +91,7 @@ const Navbar2 = () => {
 
             {/* Search Box */}
             <div className="relative mr-2">
-              <MdOutlineSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
+              {/* <MdOutlineSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" /> */}
               <input
                 type="text"
                 value={query}

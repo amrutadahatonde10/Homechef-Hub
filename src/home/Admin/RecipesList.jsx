@@ -67,6 +67,23 @@ const RecipesList = () => {
     }
   };
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`https://67a71bbe510789ef0dfcfdc7.mockapi.io/api/login/${id}`, {
+  //       method: "DELETE",
+  //     });
+  
+  //     if (!response.ok) throw new Error("Failed to delete recipe");
+  
+  //     // 🆕 UI se deleted recipe hatao
+  //     setRecipes(recipess.filter(recipe => recipe.Id !== id));
+  //   } catch (error) {
+  //     console.error("Error deleting recipe:", error);
+  //   }
+  // };
+  
+
+
   return (
     <>
     <Navbar1/>
@@ -90,24 +107,25 @@ const RecipesList = () => {
 
                 <input type="text" name="Image" value={editData.Image} onChange={handleChange} className="w-full p-2 border rounded mt-2" placeholder="Image URL" />
 
-                <label className="flex items-center mt-2">
+                {/* <label className="flex items-center mt-2">
                   <input type="checkbox" name="Like" checked={editData.Like} onChange={handleChange} />
                   <span className="ml-2">Like</span>
-                </label>
+                </label> */}
 
                 <button onClick={handleSave} className="bg-green-500 text-white px-3 py-1 mt-2 rounded">Save</button>
               </>
             ) : (
               <>
-                <img src={recipe.Image} alt={recipe.RecipeName} className="w-full h-48 object-cover rounded-lg" />
+                <img src={recipe.Image} alt={recipe.RecipeName} className="w-full h-52 object-cover object-center rounded-lg overflow-hidden" />
                 <h3 className="text-xl font-semibold">{recipe.RecipeName}</h3>
                 <p className="text-gray-600">Type: {recipe.Type}</p>
                 <p className="text-gray-600">Time: {recipe.Time} min</p>
                 <p className="text-gray-600">Rating: {recipe.Rating}</p>
                 <p className="text-gray-600">Ingredients: {recipe.Ingredients}</p>
-                <p className="text-gray-600">Liked: {recipe.Like ? "Yes" : "No"}</p>
+                {/* <p className="text-gray-600">Liked: {recipe.Like ? "Yes" : "No"}</p> */}
 
                 <button onClick={() => handleEdit(recipe)} className="bg-blue-500 text-white px-3 py-1 mt-2 rounded">Edit</button>
+                {/* <button onClick={() => handleDelete(recipe.Id)} className="bg-red-500 text-white px-3 py-1 mt-2 ml-2 rounded">Delete</button> */}
               </>
             )}
           </div>

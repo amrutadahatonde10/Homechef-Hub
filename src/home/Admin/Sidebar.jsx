@@ -4,12 +4,12 @@ import img from '../Admin/cheflogo.jpg';
 
 const Sidebar = ({ visible }) => {
   const menuItems = [
-    { to: '/', label: 'Home' },
+    { to: '/',icon:"ri-home-7-line", label: 'Home' },
     { to: '/settings',icon: "ri-settings-4-line" , label: 'Settings' },
-    { to: '/users', label: 'Users' },
-    { to: '/categories',label: 'Categories' },
+    { to: '/users',icon:"ri-group-line", label: 'Users' },
+    { to: '/categories',icon:"ri-folder-chart-line",label: 'Categories' },
     { to: '/recipess',icon: "ri-edit-2-fill",  label: 'Edit the Recipes' }, 
-    { to: '/ads', label: 'Ads' },
+    { to: '/ads',icon:"ri-advertisement-line", label: 'Ads' },
   ];
 
   return (
@@ -27,7 +27,7 @@ const Sidebar = ({ visible }) => {
           {menuItems.map((item, index) => (
             <li key={index} className="border-b border-black-700">
               <Link to={item.to} className="block py-4 px-6 hover:bg-gray-700">
-              <i className={`${item.icon} ml-1 text-lg`}></i>
+              <i className={`${item.icon} ml-1 text-lg mr-3`}></i>
                {item.label}
               </Link>
             </li>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoMdHeart } from "react-icons/io"; // Use the filled heart icon
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ id, image, title, ingredients, time }) => {
+const Card = ({ Id, image, title, ingredients, time }) => {
   const [isLiked, setIsLiked] = useState(false);
   const navigate = useNavigate();
 
@@ -52,7 +52,7 @@ const Card = ({ id, image, title, ingredients, time }) => {
         <div className="flex justify-center mt-4">
           <button
             className="bg-blue-500 text-white px-4 py-2 rounded-md"
-            onClick={() => navigate(`/recipes/${id}`)} // Navigate to recipe details
+            onClick={() => navigate(`/recipes/${Id}`)} // Navigate to recipe details
           >
             View Recipe
           </button>

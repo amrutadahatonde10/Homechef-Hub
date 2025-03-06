@@ -88,7 +88,7 @@ function RecipeForm() {
   return (
     <>
       <div>
-        <Navbar1 />
+        <Navbar1 /> 
         <Navbar2 />
       </div>
       <div className="bg-gradient-to-r from-orange-200 to-purple-200 flex justify-center mt-18 p-4 pt-12">
@@ -156,7 +156,7 @@ function RecipeForm() {
               )}
             </div>
 
-            <div className="mb-4 flex items-center">
+            {/* <div className="mb-4 flex items-center">
               <label className="block mb-1 mr-2">Like this Recipe?</label>
               <input
                 type="checkbox"
@@ -165,7 +165,7 @@ function RecipeForm() {
                 onChange={() => setFormData({ ...formData, Like: !formData.Like })}
                 className="w-5 h-5"
               />
-            </div>
+            </div> */}
 
 
             <div className="mb-4">

@@ -38,6 +38,7 @@ const Cards = () => {
         {data.slice(0, 3).map((card) => (
           <Card
             key={card.Id}
+            Id={card.Id}
             image={card.Image}
             title={card.RecipeName}
             ingredients={card.Ingredients}

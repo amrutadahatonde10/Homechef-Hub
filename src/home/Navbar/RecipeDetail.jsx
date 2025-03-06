@@ -31,7 +31,7 @@ const RecipeDetails = () => {
             <img
               src={recipe.Image}
               alt={recipe.RecipeName}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-[500px] object-cover rounded-lg shadow-lg"
             />
           </div>
 

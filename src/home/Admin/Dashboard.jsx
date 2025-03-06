@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import Header from '../Admin/Header';
 import Card from './Card';
 import Navbar1 from '../Navbar/Navbar1';
-import Navbar2 from '../Navbar/Navbar2';
+// import Navbar2 from '../Navbar/Navbar2';
 import Footer from '../Footer/Footer';
 
 const Dashboard = () => {
@@ -61,10 +61,11 @@ const Dashboard = () => {
     <>
     <div className="fixed top-0 left-0 w-full z-10">
     <Navbar1/>
-    <Navbar2/>
+    {/* <Navbar2/> */}
+    <div className='bg-purple-300 w-full h-28'></div>
     </div>
     <div className="">
-    <div className="flex h-screen bg-gray-100 mt-28">
+    <div className="flexh-screen bg-gray-100 mt-28">
       <Sidebar visible={sidebarVisible} />
       <div className={`flex-1 min-h-screen transition-margin ${sidebarVisible ? 'ml-64' : 'ml-0'}`}>
         <Header onToggle={toggleSidebar} />
@@ -76,7 +77,7 @@ const Dashboard = () => {
           ))}
         </div>
         <div className="mt-2 p-6 bg-white shadow rounded-lg">
-            <h2 className="text-xl font-semibold mb-4 ">Recipes per Category</h2>
+            <h2 className="text-xl font-semibold mb-4 ">Recipes per Their Types</h2>
             <ul className="list-disc pl-5 text-gray-700">
               {Object.entries(categoryData).map(([category, count]) => (
                 <li key={category}>

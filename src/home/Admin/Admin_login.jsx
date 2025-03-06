@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar1 from "../Navbar/Navbar1";
-import Navbar2 from "../Navbar/Navbar2";
+// import Navbar2 from "../Navbar/Navbar2";
 import img from "../../assets/homelogo.jpg";
 
 function Admin_login() {
@@ -23,7 +23,7 @@ function Admin_login() {
   return (
     <>
       <Navbar1 />
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <div className="bg-gradient-to-r from-orange-200 to-purple-200 flex items-center justify-center min-h-screen p-20">
         <div className="bg-white w-full max-w-[500px] p-6 shadow-lg border rounded-lg">
           <div className="flex items-center justify-start mb-4 gap-20">
