@@ -67,20 +67,20 @@ const RecipesList = () => {
     }
   };
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     const response = await fetch(`https://67a71bbe510789ef0dfcfdc7.mockapi.io/api/login/${id}`, {
-  //       method: "DELETE",
-  //     });
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`https://67a71bbe510789ef0dfcfdc7.mockapi.io/api/login/${id}`, {
+        method: "DELETE",
+      });
   
-  //     if (!response.ok) throw new Error("Failed to delete recipe");
+      if (!response.ok) throw new Error("Failed to delete recipe");
   
-  //     // 🆕 UI se deleted recipe hatao
-  //     setRecipes(recipess.filter(recipe => recipe.Id !== id));
-  //   } catch (error) {
-  //     console.error("Error deleting recipe:", error);
-  //   }
-  // };
+      // 🆕 UI se deleted recipe hatao
+      setRecipes(recipess.filter(recipe => recipe.Id !== id));
+    } catch (error) {
+      console.error("Error deleting recipe:", error);
+    }
+  };
   
 
 
@@ -125,7 +125,7 @@ const RecipesList = () => {
                 {/* <p className="text-gray-600">Liked: {recipe.Like ? "Yes" : "No"}</p> */}
 
                 <button onClick={() => handleEdit(recipe)} className="bg-blue-500 text-white px-3 py-1 mt-2 rounded">Edit</button>
-                {/* <button onClick={() => handleDelete(recipe.Id)} className="bg-red-500 text-white px-3 py-1 mt-2 ml-2 rounded">Delete</button> */}
+                <button onClick={() => handleDelete(recipe.Id)} className="bg-red-500 text-white px-3 py-1 mt-2 ml-2 rounded">Delete</button>
               </>
             )}
           </div>
