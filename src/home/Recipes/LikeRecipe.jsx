@@ -25,7 +25,7 @@ const LikeRecipe = () => {
         setLoading(false);
       }
     };
-    fetchData();
+    fetchData(); 
   }, []);
 
   const toggleLike = async (id) => {
