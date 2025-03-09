@@ -31,7 +31,7 @@ const AllRecipe = () => {
   if (error) {
     return <div className="text-center text-red-600 mt-10">{error}</div>;
   }
-
+ 
   return (
     <>
       <Navbar1 />
