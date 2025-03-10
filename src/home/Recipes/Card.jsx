@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdHeart } from "react-icons/io";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import Axios from "../../Axios"; // Ensure you import your Axios instance
+import Axios from "../../Axios"; 
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
@@ -92,3 +92,5 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
 };
 
 export default Card;
+
+

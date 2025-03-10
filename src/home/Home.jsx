@@ -7,7 +7,6 @@ import Adv from './Advertise/Adv';
 import Pop from './PopularRecipe/Pop';
 import Popular from './PopularRecipe/Popular';
 import Footer from './Footer/Footer';
-// import AllRecipe from './Recipes/AllRecipe'; 
 
 
 const Home = () => {
@@ -22,7 +21,6 @@ const Home = () => {
     <Pop val={"Popular Recipes"}/>
     <Popular />
     <Footer />
-     {/* <AllRecipe /> */}
 
     </div>
   )
