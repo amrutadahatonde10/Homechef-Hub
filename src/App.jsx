@@ -4,6 +4,8 @@ import Login from './userinfo/Login';
 import Register from './userinfo/Register';
 import { Route, Routes } from 'react-router-dom';
 import ViewType from './home/Category/ViewType';
+
+import About from './home/About/About'; ///////////
 import RecipeForm from './home/Add_Reciepe/RecipeForm';
 import Admin_login from './home/Admin/Admin_login';
 // import RecipeDetails from './home/Navbar/RecipeDetails';
@@ -27,6 +29,8 @@ const App = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/breakfast" element={<ViewType />} />
+
+        <Route exact path="/about" element={<About />} /> ///////////////
         <Route exact path="/add-recipe" element={<RecipeForm />} />
 
         <Route exact path="/Admin" element={<Admin_login />} />

@@ -15,10 +15,10 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
     try {
       const response = await Axios().put(`/login/${id}`, {
         Like: !isLiked,
-      }); // Replace with the correct API endpoint
+      }); 
       if (response.status === 200) {
-        setIsLiked(!isLiked); // Toggle the local like status
-      } else {
+        setIsLiked(!isLiked); 
+      } else {                              
         console.error("Failed to update like status");
       }
     } catch (error) {
@@ -27,7 +27,7 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
   };
 
   const handleRatingClick = (newRating) => {
-    setRating(newRating);
+    setRating(newRating);                                
   };
 
   return (
@@ -70,9 +70,7 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
       <p className="text-sm mt-1 text-center">
         <span className="font-semibold">Time:</span> {time} minutes
       </p>
-      <p className="text-sm mt-1 text-center font-semibold text-purple-500">
-        {type}
-      </p>
+      <p className="text-sm mt-1 text-center font-semibold text-purple-500">{type}</p>
       <h4 className="text-md font-semibold mt-1 text-center">Ingredients:</h4>
       <ul className="list-disc pl-6 mt-2 text-gray-600 text-sm ml-[34%]">
         {ingredients.split(",").map((ingredient, index) => (

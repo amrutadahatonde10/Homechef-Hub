@@ -17,7 +17,7 @@ const LikeRecipe = () => {
           ...recipe,
           Like: recipe.Like || false, // Ensure Like property is present
         }));
-        setRecipes(updatedRecipes.slice(0, 26)); // Fetch 0 to 25 recipes
+        setRecipes(updatedRecipes.slice(0, 27)); // Fetch 0 to 25 recipes
       } catch (err) {
         console.error("Error fetching data:", err);
         setError("Failed to fetch data.");

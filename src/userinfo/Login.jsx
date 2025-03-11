@@ -47,7 +47,10 @@ function Login({ onSwitchForm }) {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-orange-200 to-purple-200">
       <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-sm border border-gray-300 relative">
         {/* Logo Placement */}
-        <div className="absolute top-2 left-2">
+        <div
+          className="absolute top-2 left-2 cursor-pointer"
+          onClick={() => navigate("/")} // Navigate to the home page when clicked
+        >
           <img
             src="https://imgs.search.brave.com/h4eZqHO0NUYV2xHHaGPiRIP-7W7k9qiCxDJjjUr_B2M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzcxLzk2LzM4/LzM2MF9GXzE3MTk2/MzgzMF9kYWdxUHBX/cVphZ2pnNkpTYlFh/YW9PT0h5TlI2R2lW/ay5qcGc"
             alt="logo"
@@ -96,11 +99,11 @@ function Login({ onSwitchForm }) {
             </Link>
           </p>
           <p className="text-sm text-gray-600 mt-2">
-          login as{" "}
-         <Link to="/admin" className="text-blue-500 hover:text-red-700 ">
-         Admin
-        </Link>
-  </p>
+            Login as{" "}
+            <Link to="/admin" className="text-blue-500 hover:text-red-700">
+              Admin
+            </Link>
+          </p>
         </div>
       </div>
     </div>
@@ -108,6 +111,4 @@ function Login({ onSwitchForm }) {
 }
 
 export default Login;
-
-
 

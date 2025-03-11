@@ -1,8 +1,9 @@
-// import React, { useEffect, useState } from "react";
-// import Navbar1 from "../Navbar/Navbar1";
-// import Navbar2 from "../Navbar/Navbar2";
-// import Axios from "../../Axios";
-// import Card from "./Card";
+import React, { useEffect, useState } from "react";
+import Navbar1 from "../Navbar/Navbar1";
+import Navbar2 from "../Navbar/Navbar2";
+import Axios from "../../Axios";
+import Card from "./Card";
+
 
 // const AllRecipe = () => {
 //   const [recipes, setRecipes] = useState([]);
@@ -24,8 +25,8 @@
 //     fetchData();
 //   }, []);
 
-//   if (loading) {
-//     return <div className="text-center mt-10">Loading...</div>;
+//   if (loading) {                
+//     return <div className="text-center mt-10">Loading...</div>; 
 //   }
 
 //   if (error) {
@@ -60,25 +61,19 @@
 
 // export default AllRecipe;
 
-import React, { useEffect, useState } from "react";
-import Navbar1 from "../Navbar/Navbar1";
-import Navbar2 from "../Navbar/Navbar2";
-import Axios from "../../Axios";
-import Card from "./Card";
-
 const AllRecipe = () => {
-  const [recipes, setRecipes] = useState([]);
+  const [data, setdata] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Axios().get("/login"); // Fix Axios call
-        setData(response.data);
+        const response = await Axios().get("/login"); // Replace with the correct endpoint
+        setdata(response.data); 
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError("Failed to fetch data");
+        setError("Failed to fetch data.");
       } finally {
         setLoading(false);
       }
@@ -86,8 +81,8 @@ const AllRecipe = () => {
     fetchData();
   }, []);
 
-  if (loading) {
-    return <div className="text-center mt-10">Loading...</div>;
+  if (loading) {                
+    return <div className="text-center mt-10">Loading...</div>; 
   }
 
   if (error) {
@@ -101,7 +96,7 @@ const AllRecipe = () => {
       <div className="pt-[16vh]">
         <div className="container mx-auto p-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.slice(0, 27).map((recipe) => (
+            {data.map((recipe) => (
               <Card
                 key={recipe.Id}
                 id={recipe.Id}
