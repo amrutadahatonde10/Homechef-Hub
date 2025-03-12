@@ -8,33 +8,28 @@ const About = () => {
       <Navbar1 />
       <Navbar2 />
       <div className="pt-[18vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full px-4">
+        <div className="bg-gray-100 p-6 rounded-2xl shadow-lg w-full px-4">
+          <h2 className="text-xl font-bold mb-4 text-center">Latest Recipe</h2>
 
-          {/* Section 1 */}
-          <div className="bg-gray-100 p-6 rounded-2xl shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Section 1</h2>
-            <p>
-              This is the content for the first section. Add your description,
-              images, or other elements here.
-              This is the content for the first section. Add your description,
-              images, or other elements here.
-              This is the content for the first section. Add your description,
-              images, or other elements here.
-              This is the content for the first section. Add your description,
-              images, or other elements here.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+
+            {/* Image Section */}
+            <div className="flex justify-center items-center">
+              <img
+                className='h-[60vh] rounded-xl ml-40'
+                src="https://imgs.search.brave.com/gHwXjR-WBNXuRFrgRC9VHvzjYg_JIr768XapxFhMrPI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXdlc29tZWN1aXNp/bmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAyL1Zh/ZGEtcGFhdi5wbmc"
+                alt="Latest Recipe"
+              />
+            </div>
+
+            {/* Text Section */}
+            <div className="flex flex-col justify-center h-[60vh] w-[50vh] ml-20">
+              <p className='text-justify text-lg'>
+                At Latest Recipes, we’re passionate about keeping your cooking fresh and exciting. Our platform is dedicated to the newest recipes added by talented home chefs and food enthusiasts just like you. Discover a world of creativity with dishes inspired by the latest food trends, seasonal ingredients, and innovative twists. With each newly added recipe, there’s always something fresh for you to explore and enjoy!
+              </p>
+            </div>
+
           </div>
-
-          {/* Section 2 */}
-          <div className="bg-gray-100 p-6 rounded-2xl shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Section 2</h2>
-            <p>
-              This is the content for the second section. Customize it with
-              whatever content you'd like.
-            </p>
-          </div>
-          
-
         </div>
       </div>
     </>
@@ -42,8 +37,6 @@ const About = () => {
 };
 
 export default About;
-
-
 
 
 

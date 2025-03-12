@@ -99,7 +99,7 @@ const Navbar2 = () => {
                 </a>
               </li>
 
-              <li><a href="/recipes" className="text-base hover:text-gray-500 "><b>Recipes</b></a></li>
+              <li><a href="/Recipes123" className="text-base hover:text-gray-500 "><b>Recipes</b></a></li>
 
               <li>
                 <a
