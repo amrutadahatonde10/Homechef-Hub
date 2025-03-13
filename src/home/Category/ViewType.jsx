@@ -76,18 +76,13 @@ const ViewType = () => {
   const [savedType, setSavedType] = useState("All");
 
   useEffect(() => {
-    // Fetch recipes and filter based on saved type
     const fetchRecipes = async () => {
       try {
-        // Get the category name from localStorage
         const savedType = localStorage.getItem("name") || "All";
         setSavedType(savedType);
 
-        // Fetch recipes from the API
-        const { data } = await Axios().get("/login"); // Replace with your mock API endpoint
-        const slicedRecipes = data.slice(0, 26); // Slice the data for specific items
-
-        // Filter recipes based on the saved type
+        const { data } = await Axios().get("/login"); 
+        const slicedRecipes = data.slice(0, 26);
         const filtered =
           savedType === "All"
             ? slicedRecipes
