@@ -7,6 +7,7 @@ const Navbar1 = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLiked, setIsLiked] = useState(false); // State for the like icon
+  const notificationCount = 1; // Example notification count
 
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
@@ -46,21 +47,27 @@ const Navbar1 = () => {
         </div>
 
         <div className="h-full w-[20%] bg-purple-200">
-          <div className="mt-4 flex ml-[60%] items-center gap-4">
+          <div className="mt-4 flex ml-[55%] items-center gap-6 relative">
             {isLoggedIn && ( // Show "like" icon only if the user is logged in
-              <Link
-                className="cursor-pointer"
-                to="/LikeRecipe"
-                onClick={toggleLike} // Optional: Toggle like state when clicked
-              >
-                {isLiked ? (
-                  <FaHeart className="text-red-600 text-xl" /> // Filled heart when liked
-                ) : (
-                  <FaRegHeart className="text-gray-700 text-xl" /> // Outline heart when unliked
-                )}
-              </Link>
+              <div className="relative">
+                <Link
+                  className="cursor-pointer"
+                  to="/LikeRecipe"
+                  onClick={toggleLike} // Optional: Toggle like state when clicked
+                >
+                  {isLiked ? (
+                    <FaHeart className="text-red-600 text-xl" /> // Filled heart when liked
+                  ) : (
+                    <FaRegHeart className="text-gray-700 text-xl" /> // Outline heart when unliked
+                  )}
+                </Link>
+                {/* Small red circle with a number */}
+                <div className="absolute top-[-10px] right-[-8px] h-4 w-4 rounded-full bg-red-600 text-white flex items-center justify-center text-xs">
+                  {notificationCount}
+                </div>
+              </div>
             )}
-            
+
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
@@ -86,5 +93,3 @@ const Navbar1 = () => {
 };
 
 export default Navbar1;
-
-
