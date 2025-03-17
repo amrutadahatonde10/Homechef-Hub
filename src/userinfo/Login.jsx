@@ -72,7 +72,7 @@ function Login({ onSwitchForm }) {
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-2">
             <label className="block text-gray-700 font-semibold mb-2">Password:</label>
             <input
               ref={passwordRef}
@@ -82,6 +82,13 @@ function Login({ onSwitchForm }) {
             />
           </div>
 
+          
+        <div className="text-center mb-6 ml-16">
+      <Link to="/forgot-password" className="text-blue-500 hover:text-blue-700 text-sm ml-28">
+        Forgot Password?
+      </Link>
+    </div>
+
           <button
             type="submit"
             className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
@@ -90,6 +97,7 @@ function Login({ onSwitchForm }) {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+
 
         <div className="text-center mt-4">
           <p className="text-sm text-gray-600">

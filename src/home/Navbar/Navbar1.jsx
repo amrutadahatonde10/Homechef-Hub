@@ -78,7 +78,7 @@ const Navbar1 = () => {
             ) : (
               <Link
                 to="/login"
-                className="ml-10 px-4 pb-1 bg-blue-500 text-white rounded hover:bg-blue-700"
+                className="ml-14 px-4 pb-1 bg-blue-500 text-white rounded hover:bg-blue-700"
               >
                 LogIn
               </Link>
@@ -93,3 +93,5 @@ const Navbar1 = () => {
 };
 
 export default Navbar1;
+
+
