@@ -92,4 +92,3 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
 export default Card;
 
 
-
