@@ -2,12 +2,35 @@ import React, { useState, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa"; // Importing filled and outline heart icons
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/m.png";
+import Axios from "../../Axios";
+
 
 const Navbar1 = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLiked, setIsLiked] = useState(false); // State for the like icon
   const notificationCount = 1; // Example notification count
+  const [count, setcount] = useState(false); // State for the like icon
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await Axios().get("/login"); // Replace with the correct endpoint
+        const updatedRecipes = response.data.map((recipe) => ({
+          ...recipe,
+          Like: recipe.Like || false, // Ensure Like property is present
+        }));
+        
+        // Count recipes with Like === true
+        const likedRecipesCount = updatedRecipes.filter(recipe => recipe.Like).length;
+        setcount(likedRecipesCount); // Update count state with liked recipes
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      }
+    };
+    fetchData(); 
+  }, []);
+  
 
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
@@ -63,7 +86,7 @@ const Navbar1 = () => {
                 </Link>
                 {/* Small red circle with a number */}
                 <div className="absolute top-[-10px] right-[-8px] h-4 w-4 rounded-full bg-red-600 text-white flex items-center justify-center text-xs">
-                  {notificationCount}
+                  {count}
                 </div>
               </div>
             )}
