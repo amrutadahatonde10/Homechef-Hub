@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { MdOutlineSearch } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 
 const Navbar2 = () => {
   const [query, setQuery] = useState("");
