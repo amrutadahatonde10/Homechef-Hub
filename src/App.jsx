@@ -31,8 +31,8 @@ const App = () => {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/breakfast" element={<ViewType />} />
 
-        <Route exact path="/about" element={<About />} /> ///////////////
-        <Route exact path="/contact" element={<Contact />} /> //////////////
+        <Route exact path="/about" element={<About />} /> 
+        <Route exact path="/contact" element={<Contact />} /> 
         <Route exact path="/add-recipe" element={<RecipeForm />} />
 
         <Route exact path="/Admin" element={<Admin_login />} />
