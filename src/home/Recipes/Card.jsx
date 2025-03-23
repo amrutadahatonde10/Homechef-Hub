@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { IoMdHeart } from "react-icons/io";
+import { RiShareForwardLine } from "react-icons/ri";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import Axios from "../../Axios"; 
+import Axios from "../../Axios";
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
@@ -15,10 +16,10 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
     try {
       const response = await Axios().put(`/login/${id}`, {
         Like: !isLiked,
-      }); 
+      });
       if (response.status === 200) {
-        setIsLiked(!isLiked); 
-      } else {                              
+        setIsLiked(!isLiked);
+      } else {
         console.error("Failed to update like status");
       }
     } catch (error) {
@@ -27,25 +28,37 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
   };
 
   const handleRatingClick = (newRating) => {
-    setRating(newRating);                                
+    setRating(newRating);
   };
 
   return (
     <div className="bg-purple-100 p-4 rounded-lg shadow-lg overflow-hidden relative ">
-      {/* Image with Like Icon */}
       <div className="relative">
         <img
           src={image}
           alt={title}
           className="w-full h-48 object-cover rounded-md"
         />
-        <div
-          className="absolute top-1 right-1 bg-white/80 p-1 rounded-full cursor-pointer"
-          onClick={handleHeartClick}
-        >
-          <IoMdHeart
-            className={`text-lg ${isLiked ? "text-red-600" : "text-gray-400"}`}
-          />
+        {/* Icons Column */}
+        <div className="absolute top-1 right-1 flex flex-col items-center space-y-1">
+          {/* Heart Icon */}
+          <div
+            className="bg-zinc-200 p-1 rounded-full cursor-pointer"
+            onClick={handleHeartClick}
+          >
+            <IoMdHeart
+              className={`text-lg ${
+                isLiked ? "text-red-600" : "text-zinc-700"
+              }`}
+            />
+          </div>
+          {/* Share Icon */}
+          <div
+            className="bg-zinc-200 p-1 rounded-full cursor-pointer"
+            onClick={() => console.log("Share clicked!")}
+          >
+            <RiShareForwardLine className="text-lg text-zinc-900" />
+          </div>
         </div>
       </div>
 
@@ -70,7 +83,9 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
       <p className="text-sm mt-1 text-center">
         <span className="font-semibold">Time:</span> {time} minutes
       </p>
-      <p className="text-sm mt-1 text-center font-semibold text-purple-500">{type}</p>
+      <p className="text-sm mt-1 text-center font-semibold text-purple-500">
+        {type}
+      </p>
       <h4 className="text-md font-semibold mt-1 text-center">Ingredients:</h4>
       <ul className="list-disc pl-6 mt-2 text-gray-600 text-sm ml-[34%]">
         {ingredients.split(",").map((ingredient, index) => (
@@ -90,5 +105,3 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
 };
 
 export default Card;
-
-
