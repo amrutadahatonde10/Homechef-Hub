@@ -35,7 +35,7 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
   };
 
   const handleShareClick = () => {
-    const link = `https://homechefhub.com/recipe/${Id}`; // Generate a shareable link
+    const link = `https://homechef-hub.com/recipe/${Id}`; // Generate a shareable link
     setShareLink(link);
     setShowSharePopup(true); // Show the share popup
     setCopyButtonText("Copy"); // Reset button text to "Copy"
