@@ -20,7 +20,7 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
       const response = await Axios().put(`/login/${id}`, {
         Like: !isLiked,
       });
-      if (response.status === 200) {
+      if (response.status === 200) {    
         setIsLiked(!isLiked);
       } else {
         console.error("Failed to update like status");
