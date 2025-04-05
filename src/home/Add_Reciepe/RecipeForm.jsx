@@ -60,6 +60,12 @@ function RecipeForm() {
       Ingredients: formData.Ingredients.join(", "),
       Time: parseInt(formData.Time) || 0, // Time ko integer banana
     };
+    if (!formData.RecipeName || !formData.Type || !formData.Time || formData.Ingredients.some(ing => ing.trim() === "")) {
+      alert("Please fill all required fields before submitting.");
+      return;
+    }
+  
+    // Ingredients ko comma-separated string me convert karna
 
     try {
       const response = await fetch(

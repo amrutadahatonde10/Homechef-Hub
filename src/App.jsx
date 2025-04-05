@@ -20,6 +20,10 @@ import RecipesList from './home/Admin/RecipesList';
 import AllRecipe from './home/Recipes/AllRecipe';
 import LikeRecipe from './home/Recipes/LikeRecipe';
 
+import Advertise from './home/Admin/Updation/Advertise';
+import RecipesByType from './home/Admin/Updation/RecipesByType';
+// import Types from '/home/Admin/Updation/Types';
+
 const App = () => {
   
   return (
@@ -49,7 +53,10 @@ const App = () => {
         
         <Route path="/Recipes123" element={<AllRecipe />} />  
         <Route path="/LikeRecipe" element={<LikeRecipe />} />
-       
+        <Route path="/ads" element={<Advertise />} />
+        {/* <Route Path="types" element={<Types/>} /> */}
+        <Route path="/types/:type" element={<RecipesByType/>} />
+
       </Routes> 
    </div>
   );

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // 🆕 React Router Import
-import img from '../Admin/cheflogo.jpg';
+import img from '/src/assets/m.png';
 
 const Sidebar = ({ visible }) => {
   const menuItems = [
     { to: '/',icon:"ri-home-7-line", label: 'Home' },
     { to: '/settings',icon: "ri-settings-4-line" , label: 'Settings' },
     { to: '/users',icon:"ri-group-line", label: 'Users' },
-    { to: '/categories',icon:"ri-folder-chart-line",label: 'Categories' },
+    { to: '/types/all',icon:"ri-folder-chart-line",label: 'Types' },
     { to: '/recipess',icon: "ri-edit-2-fill",  label: 'Edit the Recipes' }, 
     { to: '/ads',icon:"ri-advertisement-line", label: 'Ads' },
   ];
@@ -15,7 +15,7 @@ const Sidebar = ({ visible }) => {
   return (
     <div className="fixed top-0 left-0 w-full z-11">
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white transition-transform transform mt-28 ${
+        className={`fixed top-0 left-0 h-full bg-gray-700 text-white transition-transform transform mt-28 ${
           visible ? 'translate-x-0' : '-translate-x-full'
         } w-64`}
       >

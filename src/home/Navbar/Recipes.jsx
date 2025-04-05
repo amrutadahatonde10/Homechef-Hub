@@ -43,6 +43,8 @@ const Recipes = () => {
                   ingredients={recipe.Ingredients}
                   time={recipe.Time}
                   type={recipe.Type}
+                  status={recipe.Status}
+                  reason={recipe.Reason}
                   navigate={navigate}
                 />
               ))
@@ -55,7 +57,7 @@ const Recipes = () => {
   );
 };
 
-const Card = ({ id, image, title, ingredients, time, type, navigate }) => {
+const Card = ({ id, image, title, ingredients, time, type ,status, reason, navigate }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [rating, setRating] = useState(0);
 
@@ -83,6 +85,28 @@ const Card = ({ id, image, title, ingredients, time, type, navigate }) => {
           <li key={index}>{ingredient.trim()}</li>
         ))}
       </ul>
+
+      <p className="text-center mt-2 font-semibold">
+        Status:{" "}
+        <span
+          className={`${
+            status === "Approved"
+              ? "text-green-600"
+              : status === "Rejected"
+              ? "text-red-600"
+              : "text-gray-600"
+          }`}
+        >
+          {status || "Pending"}
+        </span>
+      </p>
+
+      {status === "Rejected" && reason && (
+        <p className="text-center text-sm text-red-500 mt-1">
+          <span className="font-semibold">Reason:</span> {reason}
+        </p>
+      )}
+
       <div className="flex justify-center mt-4">
         <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => navigate(`/recipes/${id}`)}>
           View Recipe

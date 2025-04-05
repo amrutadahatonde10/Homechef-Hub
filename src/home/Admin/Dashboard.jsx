@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from '../Admin/Header';
 import Card from './Card';
-import Navbar1 from '../Navbar/Navbar1';
+// import Navbar1 from '../Navbar/Navbar1';
 // import Navbar2 from '../Navbar/Navbar2';
 import Footer from '../Footer/Footer';
+import img from "/src/assets/m.png";
 
 const Dashboard = () => {
   const [sidebarVisible, setSidebarVisible] = useState(true);
@@ -52,15 +53,36 @@ const Dashboard = () => {
 
   const cardsData = [
     { color: 'bg-purple-400', value: '0', label: 'Total Users', href: 'users.html' },
-    { color: 'bg-purple-400', value: '0', label: 'Total Views', href: 'dashboard.html' },
-    { color: 'bg-purple-400', value: categoriesCount, label: 'Total Categories', href: 'categories.html' },
+    { color: 'bg-purple-400', value: '0', label: 'Total Views', href: '#' },
+    { color: 'bg-purple-400', value: categoriesCount, label: 'Total Categories', href: '#' },
     { color: 'bg-purple-400', value: totalRecipes, label: 'Total Recipes',href:'/recipes' },
   ];
   
   return (
     <>
+          <div className="fixed top-0 w-full z-50">
+              <div className="h-[8vh] w-full flex bg-gray-200 shadow-md py-[1px]">
+                <div className="h-full w-[22%] flex bg-purple-200">
+                  <img src={img} alt="homecheflogo" className="w-10vh h-full bg-purple-200" />
+                  <h1 className="mt-4 italic ">
+                    <b>
+                      Home<span className="text-gray-600">Chef</span>Hub
+                    </b>
+                  </h1>
+                </div>
+        
+                <div className="h-full w-full bg-purple-200">
+                  <b>
+                    <div className="bg-black-200 mt-4 ml-[30%]">
+                      Simple recipes made for
+                      <span className="text-purple-600 italic"> real, actual, everyday life.</span>
+                    </div>
+                  </b>
+                </div>
+                </div>
+                </div>
     <div className="fixed top-0 left-0 w-full z-10">
-    <Navbar1/>
+    {/* <Navbar1/> */}
     {/* <Navbar2/> */}
     <div className='bg-purple-300 w-full h-28'></div>
     </div>
