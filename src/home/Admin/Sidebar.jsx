@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // 🆕 React Router Import
-import img from '/src/assets/m.png';
+import img from '/src/assets/cheflogo.jpg';
 
 const Sidebar = ({ visible }) => {
   const menuItems = [
