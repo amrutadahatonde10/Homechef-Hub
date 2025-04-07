@@ -125,7 +125,7 @@ const Card = ({ id, image, title, ingredients, time, type, initialLike }) => {
           </div>
         ))}
       </div>
-
+        
       <h3 className="text-center text-xl font-semibold mt-1">{title}</h3>
       <p className="text-sm mt-1 text-center">
         <span className="font-semibold">Time:</span> {time} minutes
