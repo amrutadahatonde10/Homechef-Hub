@@ -8,7 +8,7 @@ const Header = ({ onToggle }) => {
       <div className='w-1/3 flex justify-end'>
       <button
         onClick={onToggle}
-        className="bg-blue-400 text-white px-4 py-2 rounded shadow hover:bg-blue-600"
+        className="bg-zinc-100 text-black px-4 py-2 rounded shadow hover:bg-purple-300"
       >
        <i className="ri-menu-line"></i>
       </button>

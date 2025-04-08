@@ -23,6 +23,7 @@ import LikeRecipe from './home/Recipes/LikeRecipe';
 import Advertise from './home/Admin/Updation/Advertise';
 import RecipesByType from './home/Admin/Updation/RecipesByType';
 // import Types from '/home/Admin/Updation/Types';
+// import Dashboard from './home/Admin/Dashboard';
 
 const App = () => {
   
@@ -56,6 +57,8 @@ const App = () => {
         <Route path="/ads" element={<Advertise />} />
         {/* <Route Path="types" element={<Types/>} /> */}
         <Route path="/types/:type" element={<RecipesByType/>} />
+        <Route path="//recipes/" element={<Dashboard/>} />
+
 
       </Routes> 
    </div>
