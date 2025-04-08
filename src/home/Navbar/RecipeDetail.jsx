@@ -19,6 +19,14 @@ const RecipeDetails = () => {
     return <p className="text-center text-xl mt-10">Loading...</p>;
   }
 
+
+  // const getYouTubeID = (url) => {
+  //   const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+  //   const match = url.match(regExp);
+  //   return match && match[2].length === 11 ? match[2] : null;
+  // };
+  
+
   return (
     <>
     <div className="bg-gradient-to-r from-orange-100 to-purple-100" >
@@ -84,6 +92,28 @@ const RecipeDetails = () => {
 
 
         </div>
+
+{/* 
+
+
+        {recipe.YouTubeLink && (
+  <div className="mt-10">
+    <h2 className="text-2xl font-bold mb-2">Watch Recipe Video:</h2>
+    <div className="aspect-w-4 aspect-h-5">
+      <iframe
+        className="w-full h-[400px] rounded-lg shadow-lg"
+        src={`https://www.youtube.com/embed/${getYouTubeID(recipe.YouTubeLink)}`}
+        title="Recipe Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+)}
+
+ */}
+
+
       </div>
       <Footer />
       </div>

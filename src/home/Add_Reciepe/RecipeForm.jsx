@@ -11,6 +11,7 @@ function RecipeForm() {
     Time: "",
     Ingredients: [""],
     Image: "",
+    // YouTubeLink: "",
     Like: false,
     Rating: 0,
   });
@@ -36,7 +37,15 @@ function RecipeForm() {
     setFormData({ ...formData, Image: e.target.value });
   };
   
+  // const getYouTubeVideoID = (url) => {
+  //   const match = url.match(
+  //     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/
+  //   );
+  //   return match ? match[1] : "";
+  // };
   
+
+
 
   const resetForm = (event) => {
     event.preventDefault();
@@ -46,6 +55,7 @@ function RecipeForm() {
       Time: "",
       Ingredients: [""],
       Image: "",
+      // YouTubeLink: "",
       Like: false,
       Rating: 0,
     });
@@ -188,6 +198,34 @@ function RecipeForm() {
     <img src={formData.Image} alt="Selected" className="mt-3 w-full h-48 object-cover rounded" />
   )}
 </div>
+
+
+
+{/*   
+<div className="mb-4">
+  <label className="block mb-1">YouTube Video Link</label>
+  <input
+    type="text"
+    name="YouTubeLink"
+    value={formData.YouTubeLink}
+    onChange={handleChange}
+    placeholder="Enter YouTube video URL"
+    className="w-full p-2 border rounded"
+  />
+  {formData.YouTubeLink && (
+    <div className="mt-3">
+      <iframe
+        className="w-full h-64 rounded"
+        src={`https://www.youtube.com/embed/${getYouTubeVideoID(formData.YouTubeLink)}`}
+        title="YouTube Video"
+        frameBorder="0"
+        allowFullScreen
+      />
+    </div>
+  )}
+</div>
+
+ */}
 
 
 
