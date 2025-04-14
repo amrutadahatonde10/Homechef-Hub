@@ -29,27 +29,48 @@ const Recipes = () => {
       <Navbar1 />
       <Navbar2 />
       <div className="pt-[16vh]">
-        <div className="container mx-auto flex flex-col md:flex-row w-full gap-4 p-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-            {recipes.length === 0 ? (
-              <p className="text-center text-lg">No recipes found.</p>
+      <div className="container mx-auto flex flex-col w-full gap-8 p-4">
+
+              {["Approved", "Pending", "Rejected"].map((statusType) => {
+        const filteredRecipes = recipes.filter(
+          (recipe) =>
+            recipe.Status === statusType ||
+            (statusType === "Pending" && (!recipe.Status || recipe.Status === ""))
+        );
+
+        return (
+          <div key={statusType} className="mb-10 w-full bg-white rounded-xl shadow-md p-4">
+
+            <h2 className="text-2xl font-bold text-purple-700 mb-4 text-center">
+              {statusType} Recipes
+            </h2>
+
+            {filteredRecipes.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {filteredRecipes.map((recipe) => (
+                  <Card
+                    key={recipe.Id}
+                    id={recipe.Id}
+                    image={recipe.Image}
+                    title={recipe.RecipeName}
+                    ingredients={recipe.Ingredients}
+                    time={recipe.Time}
+                    type={recipe.Type}
+                    status={recipe.Status}
+                    reason={recipe.Reason}
+                    navigate={navigate}
+                  />
+                ))}
+              </div>
             ) : (
-              recipes.map((recipe) => (
-                <Card
-                  key={recipe.Id}
-                  id={recipe.Id}
-                  image={recipe.Image}
-                  title={recipe.RecipeName}
-                  ingredients={recipe.Ingredients}
-                  time={recipe.Time}
-                  type={recipe.Type}
-                  status={recipe.Status}
-                  reason={recipe.Reason}
-                  navigate={navigate}
-                />
-              ))
+              <p className="text-center text-gray-500">
+                No {statusType.toLowerCase()} recipes found.
+              </p>
             )}
           </div>
+  );
+})}
+
         </div>
       </div>
       <Footer />
