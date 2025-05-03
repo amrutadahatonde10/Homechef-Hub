@@ -10,6 +10,7 @@ import img from "/src/assets/m.png";
 
 const Dashboard = () => {
   const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [totalUsers, setTotalUsers] = useState(0);
 
     const [totalRecipes, setTotalRecipes] = useState(0); // Dummy data, replace with actual recipe count
     const [categoriesCount, setCategoriesCount] = useState(0);
@@ -37,6 +38,25 @@ const Dashboard = () => {
     fetchRecipesCount();
   }, []); 
 
+
+
+
+  useEffect(() => {
+    const fetchUsersCount = async () => {
+      try {
+        const response = await fetch("https://67a71bbe510789ef0dfcfdc7.mockapi.io/api/users"); 
+        const data = await response.json();
+        setTotalUsers(data.length);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+  
+    fetchUsersCount();
+  }, []);
+  
+
+
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
@@ -52,8 +72,8 @@ const Dashboard = () => {
   };
 
   const cardsData = [
-    { color: 'bg-purple-400', value: '0', label: 'Total Users', href: 'users.html' },
-    { color: 'bg-purple-400', value: '0', label: 'Total Views', href: '#' },
+    { color: 'bg-purple-400', value: totalUsers, label: 'Total Users', href: '#' },
+    { color: 'bg-purple-400', value: totalUsers, label: 'Total Views', href: '#' },
     { color: 'bg-purple-400', value: categoriesCount, label: 'Total Categories', href: '#' },
     { color: 'bg-purple-400', value: totalRecipes, label: 'Total Recipes',href:'/recipes' },
   ];
